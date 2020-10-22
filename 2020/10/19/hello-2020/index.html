@@ -197,15 +197,6 @@
 </script>
 
 
-    <!-- add the highlight -->
-    
-        <!-- Highlight.js -->
-        <link href="http://cdn.bootcss.com/highlight.js/10.1.0/styles/dracula.min.css" rel="stylesheet">
-        <script src="http://cdn.bootcss.com/highlight.js/10.1.0/highlight.min.js"></script>
-        <script >hljs.initHighlightingOnLoad();</script>
-    
-    <!-- end of adding the highlight -->
-
     <!-- Main Content -->
     <!-- Modify by Yu-Hsuan Yen -->
 
@@ -255,13 +246,13 @@
 <p>点击链接就可以访问了。</p>
 <p>之后将本地的 ssh 添加到该 repo （教程：<a href="https://docs.github.com/cn/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh" target="_blank" rel="noopener">ssh 连接 github</a>），然后打开博客根目录下 <code>_config.yml</code> 文件，这是博客的配置文件，在这里你可以修改与博客相关的各种信息。</p>
 <p>修改最后一行的配置</p>
-<pre><code>deploy:
+<pre><code class="language-xml">deploy:
   type: git
   repository: https://github.com/yourname/yourname.github.io
   branch: master
 </code></pre>
 <p>之后命令行输入 ：</p>
-<pre><code>npm i hexo-deployer-git # 安装 hexo 部署拓展
+<pre><code class="language-bash">npm i hexo-deployer-git # 安装 hexo 部署拓展
 hexo clean # 清空之前生成的
 hexo g # 生成静态页面
 hexo d # 上传到 github
@@ -287,7 +278,7 @@ hexo d # 上传到 github
 </ul>
 <h3 id="toc-qu-xiao-xu-hao">toc 取消序号</h3>
 <p>要把自带的编号去掉的话，可以在 <code>theme/beantech/layout/_partial/toc.ejs</code> 里面添加一个选项：</p>
-<pre><code>&lt;%- toc(page.content, { &quot;class&quot;: &quot;toc-nav&quot;,&quot;list_number&quot;:false }) %&gt;
+<pre><code class="language-ejs">&lt;%- toc(page.content, { &quot;class&quot;: &quot;toc-nav&quot;,&quot;list_number&quot;:false }) %&gt;
 </code></pre>
 <h3 id="bu-shu-dao-github-shang-tu-pian-bu-xian-shi">部署到 github 上图片不显示</h3>
 <p>非常奇怪的是，当我部署到 github pages 上的时候，发现竟然图片显示不出来。原来是相对路径的问题。于是跟着这位博友搞定</p>
@@ -305,7 +296,7 @@ hexo d # 上传到 github
 <li><a href="https://www.jianshu.com/p/c311d31265e0" target="_blank" rel="noopener">访客访站统计</a></li>
 </ul>
 <p>在<code>footer.ejs</code> 更改代码如下：</p>
-<pre><code>&lt;!-- use busuanzi to count the number of visited --&gt;
+<pre><code class="language-ejs">&lt;!-- use busuanzi to count the number of visited --&gt;
 &lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
 &lt;!-- end of uese busuanzi --&gt;
 &lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;
@@ -323,7 +314,7 @@ hexo d # 上传到 github
 </ul>
 <h3 id="dai-ma-kuai-gao-liang">代码块高亮</h3>
 <p>由于 beanTech 作者使用了 <code>hexo-renderer-markdown-it</code> 这个插件，所以默认自带的 <code>hexo-renderer-markdown</code> 的代码高亮功能就无法使用了，所以添加一下这个功能。</p>
-<pre><code>import numpy as np
+<pre><code class="language-python">import numpy as np
 
 for i in range(10):
     
@@ -513,8 +504,8 @@ for i in range(10):
                         src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
                     </iframe> -->
 
-                     <!-- use busuanzi to count the number of visited -->
-                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                    <!-- use busuanzi to count the number of visited -->
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                      <!-- end of uese busuanzi -->
                     <span id="busuanzi_container_site_pv">
                         本站总访问量<span id="busuanzi_value_site_pv"></span>次
@@ -522,7 +513,7 @@ for i in range(10):
                     <span class="post-meta-divider">|</span>
                     <span id="busuanzi_container_site_uv">
                         本站访客数<span id="busuanzi_value_site_uv"></span>人次
-                      </span>
+                    </span>
                 </p>
             </div>
         </div>
@@ -604,6 +595,16 @@ for i in range(10):
 
 
 
+    <!-- add the highlight -->
+    
+        <!-- Highlight.js -->
+        <!-- <link href="http://cdn.bootcss.com/highlight.js/10.1.0/styles/atom-one-dark.min.css" rel="stylesheet"> -->
+        <!-- <script src="http://cdn.bootcss.com/highlight.js/10.1.0/highlight.min.js"></script> -->
+        <link rel="stylesheet" href="/css/highlightjs.min.css">
+        <script src="/js/highlight.min.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script>
+    
+    <!-- end of adding the highlight -->
 
 
 	<a id="rocket" href="#top" class=""></a>
