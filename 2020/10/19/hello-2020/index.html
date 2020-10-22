@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <!-- change the icon in the website --> 
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          hexo + github pages + hux 主题 博客搭建 - JosonChan | JosonTech
+        
+    </title>
+
+    <link rel="canonical" href="https://JosonChan1998.github.io/2020/10/19/hello-2020/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('post-bg-2015.jpg')
+            /*post*/
+        
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#杂谈" title="杂谈">杂谈</a>
+                            
+                        </div>
+                        <h1>hexo + github pages + hux 主题 博客搭建</h1>
+                        <h2 class="subheading"> &quot;记录生活，记录技术&quot;</h2>
+                        <span class="meta">
+                            Posted by JosonChan on
+                            2020-10-19
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">JosonChan&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About Me</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- add the highlight -->
+    
+        <!-- Highlight.js -->
+        <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+        <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script>
+    
+    <!-- end of adding the highlight -->
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <blockquote>
+<p>感谢 <a href="https://github.com/Huxpro/huxpro.github.io" target="_blank" rel="noopener">hux</a> 设计了这个主题，同时也感谢 <a href="https://github.com/Kaijun/hexo-theme-huxblog" target="_blank" rel="noopener">kaijun</a> 和 <a href="https://github.com/YenYuHsuan/hexo-theme-beantech" target="_blank" rel="noopener">YenYuHsuan</a> 把它转成了 hexo。</p>
+</blockquote>
+<h2 id="chu-zhong">初衷</h2>
+<p>对于一个程序员来说，学会写博客是非常重要的。一方面是锻炼自己的表达能力，另一方面也方便记录，当下次遇到相同问题的时候能够避免重复踩坑，提高效率。同时记录本身就是对问题的复现，或许写一遍之后对于该问题的理解能够更加透彻。</p>
+<p>刚开始使用的是 csdn，虽然说 csdn 容易编写，对新手非常友好，但是后面逐渐发现 csdn 的技术博客鱼龙混杂而且界面也不好看。之后就转到有道云笔记，但是有道云中 md 功能并不完善且每个月的会员还要15块，因此决定自己搭建一个 blog 。在网上看到的方案非常多，就是刚好看到 hexo + github pages 这个方案吧，然后选了一个挺好看的模板，慢慢改吧。希望以后将自己遇到的问题都放在这里。</p>
+<h2 id="bo-ke-da-jian-guo-cheng">博客搭建过程</h2>
+<p>首先我使用的方案是 hexo + github pages。需要的步骤如下：</p>
+<ul>
+<li>安装 node.js 和 git</li>
+<li>安装 hexo 进行初始化</li>
+<li>创建 github 账户并部署博客</li>
+<li>选择一个合适的 hexo 主题</li>
+</ul>
+<h3 id="an-zhuang-node-js-he-git">安装 node.js 和 git</h3>
+<p>node.js 直接到<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">官网</a>下载就行，然后一路默认 next 安装即可。</p>
+<p>安装完成之后，在命令行输入 <code>node --version</code> 验证安装成功。</p>
+<p><img src="/2020/10/19/hello-2020/node-version.jpg" alt="node-version"></p>
+<p>git 也是<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">官网</a>下载就行，只不过需要注意把路径添加到系统变量中。</p>
+<p>安装完成后在命令行输入 <code>git--version</code> 验证是否成功。</p>
+<h3 id="an-zhuang-hexo-jin-xing-chu-shi-hua">安装 Hexo 进行初始化</h3>
+<p>在合适的地方新建一个文件夹，用来存放自己的博客文件，比如我的博客文件都存放在 <code>D:\其他\我的博客</code> 目录下。</p>
+<p>然后右键 <code>git bash here</code>, 输入 <code>npm i hexo-cli -g</code> 安装 Hexo。</p>
+<p>安装完后输入 <code>hexo-v</code> 验证是否成功。</p>
+<p>然后就要初始化我们的网站，输入 <code>hexo init</code> 初始化文件夹，接着输入 <code>npm install</code>安装必备的组件。</p>
+<p>然后输入 <code>hexo g</code> 生成静态网页，然后输入 <code>hexo s</code> 打开本地服务器，然后浏览器打开<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>，就可以看到我们的博客了。</p>
+<h3 id="github-pages-bu-shu">github pages 部署</h3>
+<p>首先注册一个 <a href="https://github.com" target="_blank" rel="noopener">github</a> 账户，然后新建一个 repo ：</p>
+<p><img src="/2020/10/19/hello-2020/new-repo.jpg" alt="new repo"></p>
+<p>注意这里的名字一定要和你的 username 一样，也就是说 repo 的名字为 <code>&lt;username&gt;.github.io</code></p>
+<p>生成之后选择设置，点击 choose a theme 选择一个主题之后就变这样：</p>
+<p><img src="/2020/10/19/hello-2020/github-pages.jpg" alt="github-page"></p>
+<p>点击链接就可以访问了。</p>
+<p>之后将本地的 ssh 添加到该 repo （教程：<a href="https://docs.github.com/cn/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh" target="_blank" rel="noopener">ssh 连接 github</a>），然后打开博客根目录下 <code>_config.yml</code> 文件，这是博客的配置文件，在这里你可以修改与博客相关的各种信息。</p>
+<p>修改最后一行的配置</p>
+<pre><code class="language-xml">deploy:
+  type: git
+  repository: https://github.com/yourname/yourname.github.io
+  branch: master
+</code></pre>
+<p>之后命令行输入 ：</p>
+<pre><code class="language-bash">npm i hexo-deployer-git # 安装 hexo 部署拓展
+hexo clean # 清空之前生成的
+hexo g # 生成静态页面
+hexo d # 上传到 github
+</code></pre>
+<p>打开你的 github 主页应该就能看到了。</p>
+<h3 id="xuan-ze-he-gua-de-zhu-ti">选择合适的主题</h3>
+<p>这里我直接选的是 <a href="https://github.com/YenYuHsuan/hexo-theme-beantech" target="_blank" rel="noopener">YenYuHsuan</a> 的，建议直接 fork 下来，按照 readme 进行配置就行了。</p>
+<h2 id="zhu-ti-you-hua">主题优化</h2>
+<p><a href="https://github.com/YenYuHsuan/hexo-theme-beantech" target="_blank" rel="noopener">YenYuHsuan</a> 的主题，不知道是不是我电脑的问题，遇到了挺多 bug 的，也作了一些更改，记录如下</p>
+<h3 id="diao-jie-jian-ju">调节间距</h3>
+<p>我发现一些间距有点问题，就是用了google 的网页检查功能，然后修改对应的 styl\css 代码或者是 ejs 代码。实例如下：</p>
+<p><img src="/2020/10/19/hello-2020/margin.jpg" alt="margin"></p>
+<p>这里的 2020 与前面的间距，通过 google 的网页检查功能定位到：</p>
+<p><img src="/2020/10/19/hello-2020/just-margin.jpg" alt="just-margin"></p>
+<p>在 <code>theme/source/css</code> 中找到 <code>beantech.min.css</code>，修改 <code>margin-bottom</code> 为 <code>40px</code>。（原本为 <code>20px</code> ）</p>
+<p>以上只是抛转引玉，如果对博客布局有什么不满意的可以这样改，我还改了 toc 的编号间距，recent posts 的间距，大家可以自行对比一下。</p>
+<h3 id="toc-mao-dian-ding-wei-wen-ti">toc 锚点定位问题</h3>
+<p><img src="/2020/10/19/hello-2020/toc.jpg" alt="toc"></p>
+<p>这里点击链接的话无法进行定位，聚焦之后发现它的链接 id 为 null ，于是查看作者 toc.ejs 代码发现不是它的锅，是 hexo 的 toc 函数。于是再到 <code>node_module/hexo/lib/plugins/helper/toc.js</code> 查看，发现是返回的 id 有问题。</p>
+<p>查阅之后发现原来是 markdown-it 插件的锅，于是安装 markdown-it-named-headings 插件，这个插件是另外一个大佬针对这个 bug 做的一个修复。详细流程见：</p>
+<ul>
+<li><a href="https://www.dazhuanlan.com/2019/12/05/5de8d9ba57a52/" target="_blank" rel="noopener">toc 锚点定位问题</a></li>
+</ul>
+<h3 id="toc-qu-xiao-xu-hao">toc 取消序号</h3>
+<p>要把自带的编号去掉的话，可以在 <code>theme/beantech/layout/_partial/toc.ejs</code> 里面添加一个选项：</p>
+<pre><code class="language-javascript">&lt;%- toc(page.content, { &quot;class&quot;: &quot;toc-nav&quot;,&quot;list_number&quot;:false }) %&gt;
+</code></pre>
+<h3 id="bu-shu-dao-github-shang-tu-pian-bu-xian-shi">部署到 github 上图片不显示</h3>
+<p>非常奇怪的是，当我部署到 github pages 上的时候，发现竟然图片显示不出来。原来是相对路径的问题。于是跟着这位博友搞定</p>
+<ul>
+<li><a href="https://kilig947.gitee.io/personal-blog/2020/05/26/newsolve/" target="_blank" rel="noopener">部署到 github 上图片不显示</a></li>
+</ul>
+<h3 id="qu-xiao-diupus-duo-shuo-shi-yong-gitalk">取消diupus/多说，使用Gitalk</h3>
+<p>diupus 需要科学上网之后才能使用，多说已经停更了。于是看到有用 Gitalk的，跟着搞了一波效果还行：</p>
+<ul>
+<li><a href="https://luckyxue.github.io/2019/07/01/Hexo+Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%B0%8F%E7%99%BD%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">添加Gitalk方法 </a></li>
+</ul>
+<h3 id="tian-jia-fang-zhan-he-fang-ke-tong-ji">添加访站和访客统计</h3>
+<p>想要添加一下访问的次数。</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/c311d31265e0" target="_blank" rel="noopener">访客访站统计</a></li>
+</ul>
+<p>在<code>footer.ejs</code> 更改代码如下：</p>
+<pre><code class="language-ejs">&lt;!-- use busuanzi to count the number of visited --&gt;
+&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
+&lt;!-- end of uese busuanzi --&gt;
+&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;
+    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次
+&lt;/span&gt;
+&lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;
+&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;
+    本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次
+&lt;/span&gt;
+</code></pre>
+<h3 id="hexo-sheng-ji-da-fa">hexo 升级大法</h3>
+<p>在一些时候，我怀疑是不是自己 hexo 或者插件的版本太低，于是可以升级一波，具体方法：</p>
+<ul>
+<li><a href="https://hermeswu.github.io/2018/04/25/Hexo/Hexo%E5%8D%87%E7%BA%A7%E5%A4%A7%E6%B3%95/" target="_blank" rel="noopener">hexo 升级</a></li>
+</ul>
+<h3 id="dai-ma-kuai-gao-liang">代码块高亮</h3>
+<p>由于 beanTech 作者使用了 <code>hexo-renderer-markdown-it</code> 这个插件，所以默认自带的 <code>hexo-renderer-markdown</code> 的代码高亮功能就无法使用了，所以添加一下这个功能。</p>
+<pre><code class="language-python">import numpy as np
+
+for i in range(10):
+    
+
+</code></pre>
+<h2 id="hou-ji">后记</h2>
+<p>博客搭建就算告一段落了，搭建过程中让我体会到 <code>HTML/CSS/EJS/JS</code> 的一些用法，感觉还是有趣的，希望之后能够把这个主题的实现看一下，然后自己来改改，想想再怎么优化，加油吧骚年。</p>
+
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2020/10/21/git-warning/" data-toggle="tooltip" data-placement="top" title="git warning LF will be replaced by CRLF">&larr; Previous Post</a>
+                        </li>
+                     
+                    
+                </ul>
+
+                <!-- Gitalk start -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+                <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+                <div id="gitalk-container"></div>
+                <script src="/js/md5.min.js"></script>
+                <script type="text/javascript">
+                    var gitalk = new Gitalk({
+                    clientID: '3d734b9ad4a0a2efad33',
+                    clientSecret: 'e1490d5ba1918bf8fadada6f4ace1e575768e578',
+                    repo: 'josonchan1998.github.io',  //如 'convivae.github.io'
+                    owner: 'josonchan1998',
+                    admin: ['josonchan1998'], //这是个字符串数组，可填写多个
+                    id: md5(location.pathname),      // 页面的唯一标识。长度必须小于50，默认是文章路径
+                    distractionFreeMode: true  // 类似Facebook评论框的全屏遮罩效果.
+                    });
+                    gitalk.render('gitalk-container');
+                </script>
+                <!-- Gitalk end -->
+            </div>    
+            
+            <!-- Table of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#chu-zhong"><span class="toc-nav-text">初衷</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#bo-ke-da-jian-guo-cheng"><span class="toc-nav-text">博客搭建过程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#an-zhuang-node-js-he-git"><span class="toc-nav-text">安装 node.js 和 git</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#an-zhuang-hexo-jin-xing-chu-shi-hua"><span class="toc-nav-text">安装 Hexo 进行初始化</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#github-pages-bu-shu"><span class="toc-nav-text">github pages 部署</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#xuan-ze-he-gua-de-zhu-ti"><span class="toc-nav-text">选择合适的主题</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#zhu-ti-you-hua"><span class="toc-nav-text">主题优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#diao-jie-jian-ju"><span class="toc-nav-text">调节间距</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#toc-mao-dian-ding-wei-wen-ti"><span class="toc-nav-text">toc 锚点定位问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#toc-qu-xiao-xu-hao"><span class="toc-nav-text">toc 取消序号</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#bu-shu-dao-github-shang-tu-pian-bu-xian-shi"><span class="toc-nav-text">部署到 github 上图片不显示</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#qu-xiao-diupus-duo-shuo-shi-yong-gitalk"><span class="toc-nav-text">取消diupus/多说，使用Gitalk</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#tian-jia-fang-zhan-he-fang-ke-tong-ji"><span class="toc-nav-text">添加访站和访客统计</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#hexo-sheng-ji-da-fa"><span class="toc-nav-text">hexo 升级大法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#dai-ma-kuai-gao-liang"><span class="toc-nav-text">代码块高亮</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hou-ji"><span class="toc-nav-text">后记</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#杂谈" title="杂谈">杂谈</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://JosonChan1998.github.io" target="_blank">JosonChan&#39;s Blog</a></li>
+                    
+                        <li><a href="http://beantech.org" target="_blank">Bean Tech</a></li>
+                    
+                        <li><a href="http://blog.kaijun.rocks" target="_blank">Kaijun&#39;s Blog</a></li>
+                    
+                        <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/chan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/JosonChan1998">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                   
+                    Copyright &copy; JosonChan 2020 
+                    <br>
+                    Theme by <a href="http://beantech.org">BeanTech</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="https://josonchan1998.github.io">JosonChan</a>
+                    <br>
+                    <!-- <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
+                    </iframe> -->
+
+                     <!-- use busuanzi to count the number of visited -->
+                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                     <!-- end of uese busuanzi -->
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv">
+                        本站访客数<span id="busuanzi_value_site_uv"></span>人次
+                      </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://JosonChan1998.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="https://JosonChan1998.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
