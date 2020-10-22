@@ -278,7 +278,7 @@ hexo d # 上传到 github
 </ul>
 <h3 id="toc-qu-xiao-xu-hao">toc 取消序号</h3>
 <p>要把自带的编号去掉的话，可以在 <code>theme/beantech/layout/_partial/toc.ejs</code> 里面添加一个选项：</p>
-<pre><code class="language-ejs">&lt;%- toc(page.content, { &quot;class&quot;: &quot;toc-nav&quot;,&quot;list_number&quot;:false }) %&gt;
+<pre><code>&lt;%- toc(page.content, { &quot;class&quot;: &quot;toc-nav&quot;,&quot;list_number&quot;:false }) %&gt;
 </code></pre>
 <h3 id="bu-shu-dao-github-shang-tu-pian-bu-xian-shi">部署到 github 上图片不显示</h3>
 <p>非常奇怪的是，当我部署到 github pages 上的时候，发现竟然图片显示不出来。原来是相对路径的问题。于是跟着这位博友搞定</p>
@@ -296,7 +296,7 @@ hexo d # 上传到 github
 <li><a href="https://www.jianshu.com/p/c311d31265e0" target="_blank" rel="noopener">访客访站统计</a></li>
 </ul>
 <p>在<code>footer.ejs</code> 更改代码如下：</p>
-<pre><code class="language-ejs">&lt;!-- use busuanzi to count the number of visited --&gt;
+<pre><code>&lt;!-- use busuanzi to count the number of visited --&gt;
 &lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
 &lt;!-- end of uese busuanzi --&gt;
 &lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;
@@ -314,12 +314,22 @@ hexo d # 上传到 github
 </ul>
 <h3 id="dai-ma-kuai-gao-liang">代码块高亮</h3>
 <p>由于 beanTech 作者使用了 <code>hexo-renderer-markdown-it</code> 这个插件，所以默认自带的 <code>hexo-renderer-markdown</code> 的代码高亮功能就无法使用了，所以添加一下这个功能。</p>
-<pre><code class="language-python">import numpy as np
-
-for i in range(10):
-    
-
+<ul>
+<li><a href="https://zihengcat.github.io/2018/03/05/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0highlight-js%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/" target="_blank" rel="noopener">代码块高亮</a></li>
+</ul>
+<p>但是按照它的方法，我只能在本地端有反应，上传上去之后，服务端没有反应。查看网页源代码也看到 css,js 被加载了，但就是没有效果。后来想了想，可能是github不支持在线的获取，把对应的 css ,js 文件下载下来放到 <code>theme/source/css</code> 和 <code>theme/source/js</code> 中，更改代码如下：</p>
+<pre><code>    &lt;!-- add the highlight --&gt;
+    &lt;% if (config.highlightjs) { %&gt;
+        &lt;!-- Highlight.js --&gt;
+        &lt;!-- &lt;link href=&quot;http://cdn.bootcss.com/highlight.js/10.1.0/styles/atom-one-dark.min.css&quot; rel=&quot;stylesheet&quot;&gt; --&gt;
+        &lt;!-- &lt;script src=&quot;http://cdn.bootcss.com/highlight.js/10.1.0/highlight.min.js&quot;&gt;&lt;/script&gt; --&gt;
+        &lt;%- css('css/highlightjs.min.css') %&gt;
+        &lt;script src=&quot;/js/highlight.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script &gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+    &lt;% } %&gt;
+    &lt;!-- end of adding the highlight --&gt;
 </code></pre>
+<p>上传之后完美解决。</p>
 <h2 id="hou-ji">后记</h2>
 <p>博客搭建就算告一段落了，搭建过程中让我体会到 <code>HTML/CSS/EJS/JS</code> 的一些用法，感觉还是有趣的，希望之后能够把这个主题的实现看一下，然后自己来改改，想想再怎么优化，加油吧骚年。</p>
 
