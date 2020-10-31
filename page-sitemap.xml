@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>https://JosonChan1998.github.io/about/</loc>
+        <lastmod>2020-10-31T02:55:33.492Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://JosonChan1998.github.io/archive/</loc>
         <lastmod>2020-10-20T05:12:17.378Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,13 +23,6 @@
     <url>
         <loc>https://JosonChan1998.github.io/tags/</loc>
         <lastmod>2020-10-19T14:41:07.140Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://JosonChan1998.github.io/about/</loc>
-        <lastmod>2020-10-19T12:56:37.054Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
