@@ -38,6 +38,9 @@
 
     <link rel="stylesheet" href="/css/toc.css">
 
+    
+    
+
     <!-- Custom Fonts -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
@@ -211,9 +214,9 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="wen-ti">问题</h2>
+                <h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2>
 <p>今天打算更新一下博客，但在使用 <code>hexo d</code> 之后发生错误：</p>
-<pre><code class="language-bash">unable to access 'https://github.com/josonchan1998/josonchan1998.github.io': OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
+<pre class="highlight"><code class="bash">unable to access 'https://github.com/josonchan1998/josonchan1998.github.io': OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
 </code></pre>
 <p>网上查阅之后发现可能又以下三个原因：</p>
 <ul>
@@ -228,12 +231,12 @@
 </li>
 </ul>
 <p>在 <code>stackflow</code> 上看到一个国友的回答：</p>
-<pre><code>n china , always have a problem in internet. such as github and others websites. this conmand when your git couldnt connect it, may be you use SSR , you use this conmand in git bash here (where you should push ),I use it ,I can connected github,hope this can help you.
+<pre class="highlight"><code class>n china , always have a problem in internet. such as github and others websites. this conmand when your git couldnt connect it, may be you use SSR , you use this conmand in git bash here (where you should push ),I use it ,I can connected github,hope this can help you.
 </code></pre>
 <p>所以使用命令如下，意思是为 git 添加代理，后面应该就是你的代理地址，通过电脑设置可以看到。</p>
-<pre><code class="language-bash">git config --global --add remote.origin.proxy &quot;127.0.0.1:1080&quot;
+<pre class="highlight"><code class="bash">git config --global --add remote.origin.proxy &quot;127.0.0.1:1080&quot;
 </code></pre>
-<h2 id="zong-jie">总结</h2>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
 <p>以前遇到问题的话总是在网上搜索答案、解决方法，却很少去思考它的本质。但现在看来，唯有多思考，多总结，才能成长。</p>
 <p>PS:保研经历还没更完，等这几天忙完吧。</p>
 
@@ -242,6 +245,10 @@
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2020/10/31/机器学习-01模型评估与选择/" data-toggle="tooltip" data-placement="top" title="机器学习-01模型评估与选择">&larr; Previous Post</a>
+                        </li>
                      
                     
                         <li class="next">
@@ -278,7 +285,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#wen-ti"><span class="toc-nav-text">问题</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#zong-jie"><span class="toc-nav-text">总结</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#问题"><span class="toc-nav-text"> 问题</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#总结"><span class="toc-nav-text"> 总结</span></a></li></ol>
         
         </div>
       </aside>

@@ -38,6 +38,9 @@
 
     <link rel="stylesheet" href="/css/toc.css">
 
+    
+    
+
     <!-- Custom Fonts -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->
@@ -211,10 +214,10 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="wen-ti">问题</h2>
+                <h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2>
 <p>在使用 hexo d 的时候出现：<code>warning: LF will be replaced by CRLF</code></p>
 <p>原因就是 windows 系统使用 CRLF ，即回车换行，而在 Linux/Mac 系统上使用 LF，于是这样产生了冲突。由于我使用的平台是 windows ，因此采用：</p>
-<pre><code class="language-bash">#提交时转换为LF，检出时转换为CRLF
+<pre class="highlight"><code class="bash">#提交时转换为LF，检出时转换为CRLF
 $ git config --global core.autocrlf true
 </code></pre>
 <p>把 <code>core.autocrlf</code> 设置为 <code>true</code> 的话，在 windows 上的 <code>crlf</code> 在提交的时候会变成 <code>lf</code>，而在我们检出代码时会自动转回来，虽然还是提示 <code>warning</code> ，但这对于跨平台是有好处的。</p>
@@ -222,7 +225,7 @@ $ git config --global core.autocrlf true
 <ul>
 <li><a href="https://www.jianshu.com/p/450cd21b36a4" target="_blank" rel="noopener">关于git提示“warning: LF will be replaced by CRLF”终极解答</a></li>
 </ul>
-<h2 id="hou-ji">后记</h2>
+<h2 id="后记"><a class="markdownIt-Anchor" href="#后记"></a> 后记</h2>
 <p>有时候一些小 bug 很容易忽略，但其实深究下去会发现有很多的知识点。</p>
 
                 
@@ -270,7 +273,7 @@ $ git config --global core.autocrlf true
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#wen-ti"><span class="toc-nav-text">问题</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hou-ji"><span class="toc-nav-text">后记</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#问题"><span class="toc-nav-text"> 问题</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#后记"><span class="toc-nav-text"> 后记</span></a></li></ol>
         
         </div>
       </aside>
