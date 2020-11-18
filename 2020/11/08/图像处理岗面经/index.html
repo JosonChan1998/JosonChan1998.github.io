@@ -15,11 +15,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          git warning LF will be replaced by CRLF - JosonChan | JosonTech
+          计算机视觉实习-面经 - JosonChan | JosonTech
         
     </title>
 
-    <link rel="canonical" href="https://JosonChan1998.github.io/2020/10/21/git-warning/">
+    <link rel="canonical" href="https://JosonChan1998.github.io/2020/11/08/图像处理岗面经/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -73,7 +73,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('post-bg-2015.jpg')
+            background-image: url('/img/post-bg-2015.jpg')
             /*post*/
         
     }
@@ -90,14 +90,14 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#git" title="git">git</a>
+                              <a class="tag" href="/tags/#sharing" title="sharing">sharing</a>
                             
                         </div>
-                        <h1>git warning LF will be replaced by CRLF</h1>
-                        <h2 class="subheading"> &quot;换行符引起的 warning &quot;</h2>
+                        <h1>计算机视觉实习-面经</h1>
+                        <h2 class="subheading"> \&quot;算法工程师的第一要素是工程师\&quot; </h2>
                         <span class="meta">
                             Posted by JosonChan on
-                            2020-10-21
+                            2020-11-08
                         </span>
                     </div>
                 
@@ -214,33 +214,235 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2>
-<p>在使用 hexo d 的时候出现：<code>warning: LF will be replaced by CRLF</code></p>
-<p>原因就是 windows 系统使用 CRLF ，即回车换行，而在 Linux/Mac 系统上使用 LF，于是这样产生了冲突。由于我使用的平台是 windows ，因此采用：</p>
-<pre class="highlight"><code class="bash">#提交时转换为LF，检出时转换为CRLF
-$ git config --global core.autocrlf true
-</code></pre>
-<p>把 <code>core.autocrlf</code> 设置为 <code>true</code> 的话，在 windows 上的 <code>crlf</code> 在提交的时候会变成 <code>lf</code>，而在我们检出代码时会自动转回来，虽然还是提示 <code>warning</code> ，但这对于跨平台是有好处的。</p>
-<p>详细可查看：</p>
+                <blockquote>
+<p>最近，在保研结束之后，将想去公司体验一下，于是开始找实习。虽然中间有很多事耽搁了，没准备充分，但也算积攒了一些经验。希望后面找工作的时候能够引以为戒。</p>
+</blockquote>
+<h2 id="大象机器人-python实习生拿到offer"><a class="markdownIt-Anchor" href="#大象机器人-python实习生拿到offer"></a> 大象机器人 - Python实习生（拿到offer）</h2>
+<blockquote>
+<p>先从小公司开始面起，体验一下，HR 人很好，技术面问得不深，整体过程感觉良好。当天就回复通过了，思考了两天就拒了。</p>
+</blockquote>
+<h3 id="hr面"><a class="markdownIt-Anchor" href="#hr面"></a> HR面</h3>
 <ul>
-<li><a href="https://www.jianshu.com/p/450cd21b36a4" target="_blank" rel="noopener">关于git提示“warning: LF will be replaced by CRLF”终极解答</a></li>
+<li>
+<p>自我介绍</p>
+</li>
+<li>
+<p>项目做了什么，获得什么成果</p>
+</li>
+<li>
+<p>Python什么程度</p>
+</li>
+<li>
+<p>算法工程师与我们这个岗位的区别，为什么选？</p>
+</li>
+<li>
+<p>平时怎么学习，专业什么方向，如何获取国外信息？</p>
+</li>
+<li>
+<p>一周来几天，实习时间，什么时候可以过来</p>
+</li>
+<li>
+<p>反问</p>
+</li>
 </ul>
-<h2 id="后记"><a class="markdownIt-Anchor" href="#后记"></a> 后记</h2>
-<p>有时候一些小 bug 很容易忽略，但其实深究下去会发现有很多的知识点。</p>
+<h3 id="技术面"><a class="markdownIt-Anchor" href="#技术面"></a> 技术面</h3>
+<ul>
+<li>平时用C++11/98？11比98多了什么特性和库</li>
+<li>类和对象的区别</li>
+<li>常见的排序，时间复杂度</li>
+<li>Python情况</li>
+<li>有无作正常图像目标检测的经验</li>
+<li>项目中帧率问题怎么解决</li>
+<li>单目姿态估计流程</li>
+<li>双目过程，PCL会吗？</li>
+<li>slam了解不？</li>
+</ul>
+<h2 id="即构科技-ai图像视频实习生拿到offer"><a class="markdownIt-Anchor" href="#即构科技-ai图像视频实习生拿到offer"></a> 即构科技 - AI图像视频实习生（拿到offer）</h2>
+<blockquote>
+<p>还是尝试一下，一面的面试官人非常nice，问得比较深，遇到不会的也不刁难，而是给我解答。同时最后还跟他聊了一下视觉方面的发展，还对于我的简历和个人的职业规划作出了一些建议，非常感谢师兄。二面的面试官估计是总监吧，感觉问的比较随性，其实面得挺差，但它说实习生要求不高也就算了，当场就跟我说通过了。后面思考了好几天，也拒了。（因为后面还有很多面试结果没出）</p>
+</blockquote>
+<h3 id="技术一面"><a class="markdownIt-Anchor" href="#技术一面"></a> 技术一面</h3>
+<ul>
+<li>
+<p>自我介绍，讲学业背景，讲比赛</p>
+</li>
+<li>
+<p>比赛形式介绍，主要做了什么内容，有什么衡量指标</p>
+</li>
+<li>
+<p>yolov3_lite 介绍一下</p>
+</li>
+<li>
+<p>为什么用 cascade_rcnn？与其他的不同在哪？</p>
+</li>
+<li>
+<p>为什么要用ohem ?</p>
+</li>
+<li>
+<p>项目中用的什么平台？编译caffe遇到了什么问题，怎么解决？mmdetection 介绍一下</p>
+</li>
+<li>
+<p>C++/Python 哪个用得多</p>
+</li>
+<li>
+<p>GAN，自编码机讲一下</p>
+</li>
+<li>
+<p>GAN的判别器损失函数是？</p>
+</li>
+<li>
+<p>介绍一下项目中如何使用 solvepnp ，怎么从2d变到3d，如何标定</p>
+</li>
+<li>
+<p>为什么用lenet网络，有无实际编写网络的经验</p>
+</li>
+<li>
+<p>比赛中哪些部分是你做的？</p>
+</li>
+<li>
+<p>数据增强部分说一下，有无使用检测方面的增强</p>
+</li>
+<li>
+<p>数据怎么标注？标注的格式怎么样，如何转到coco格式？</p>
+</li>
+</ul>
+<h3 id="技术二面"><a class="markdownIt-Anchor" href="#技术二面"></a> 技术二面</h3>
+<ul>
+<li>讲一下lenet训练流程</li>
+<li>yolov3_lite 数据集怎么做</li>
+<li>ohem 的原理，为什么要用？</li>
+<li>智力题：一群人开舞会，每人头上都戴着一顶帽子。帽子只有黑白两种，黑的至少有一顶。每个人都能看到其它人帽子的颜色，却看不到自己的。主持人先让大家 看看别人头上戴的是什幺帽子，然后关灯，如果有人认为自己戴的是黑帽子，就打自己一个耳光。第一次关灯，没有声音。于是再开灯，大家再看一遍，关灯时仍然 鸦雀无声。一直到第三次关灯，才有劈劈啪啪打耳光的声音响起。问有多少人戴着黑帽子？</li>
+<li>使用什么语言？C++怎么样</li>
+<li>C++ 写一个单例模式</li>
+</ul>
+<h2 id="普渡机器人-感知算法实习生-拿到offer"><a class="markdownIt-Anchor" href="#普渡机器人-感知算法实习生-拿到offer"></a> 普渡机器人 - 感知算法实习生 （拿到offer）</h2>
+<blockquote>
+<p>有两个面试官，估计是工程师。问得不深，主要问的是知识的广度，说出了大概就行。下午面完，当天晚上就给offer了，后面思考了两天也拒了（因为腾讯音乐过了）。感觉普渡做送餐机器人，服务机器人还是很不错的，希望做机器人方向的可以去。</p>
+</blockquote>
+<ul>
+<li>自我介绍</li>
+<li>说一下机器人自动瞄准的流程，pnp算法的流程</li>
+<li>相机标定，标定什么参数</li>
+<li>Lenet 的用途，做了什么数据增强</li>
+<li>说一下对目标检测的了解，anchor_free 了解多少</li>
+<li>为什么用 cascade_RCNN</li>
+<li>Ohem 原理讲一下，怎么做</li>
+<li>了解什么卷积</li>
+<li>了解什么阈值算法</li>
+<li>给你一个网络，怎么做加速</li>
+<li>知识蒸馏说一下</li>
+<li>目标检测指标，map怎么计算，recall，precision怎么算</li>
+<li>双目视觉流程说一下</li>
+</ul>
+<h2 id="tcl工业研究院-ai算法实习生-拿到offer"><a class="markdownIt-Anchor" href="#tcl工业研究院-ai算法实习生-拿到offer"></a> TCL工业研究院 - AI算法实习生 （拿到offer）</h2>
+<blockquote>
+<p>TCL工业研究院很大，满满的科技感。HR小姐姐和两个面试官人都很好，主要问的是一些三维视觉和深度学习的基础，遇到不会的也给我解答，体验良好。下午面完，晚上就给offer了，思考了几天也拒了。</p>
+</blockquote>
+<ul>
+<li>自我介绍</li>
+<li>项目中 slovepnp 怎么使用</li>
+<li>Yolov3_lite 数据集怎么做的，做了什么改进</li>
+<li>Resnet 的作用</li>
+<li>Vgg 和 Alexnet 的区别</li>
+<li>了解什么卷积</li>
+<li>BN 的作用</li>
+<li>激活函数的作用是什么</li>
+<li>怎么理解卷积</li>
+<li>双目视觉流程</li>
+<li>给定三个点，如何求法向量</li>
+<li>了解 NLP 吗？</li>
+</ul>
+<h2 id="腾讯音乐-多媒体算法实习生-拿到-offer"><a class="markdownIt-Anchor" href="#腾讯音乐-多媒体算法实习生-拿到-offer"></a> 腾讯音乐 - 多媒体算法实习生 （拿到 offer）</h2>
+<blockquote>
+<p>面试官人非常nice，主要是问的项目，问项目的每一个细节。然后强调的是解决问题的能力。面完之后，隔了两天给offer。</p>
+</blockquote>
+<ul>
+<li>自我介绍</li>
+<li>介绍比赛，自动瞄准项目怎么做</li>
+<li>做了什么数据增强</li>
+<li>相机怎么选型</li>
+<li>Yolov3_lite 怎么选的，数据集怎么做</li>
+<li>熟悉Pytorch吗？</li>
+<li>C++/Python 熟悉程度</li>
+<li>代码题：数据清洗，使用xml 和 正则表达式</li>
+</ul>
+<h2 id="腾讯广告-计算机视觉算法实习生拿到-offer"><a class="markdownIt-Anchor" href="#腾讯广告-计算机视觉算法实习生拿到-offer"></a> 腾讯广告 - 计算机视觉算法实习生（拿到 offer)</h2>
+<blockquote>
+<p>腾讯总部是我面的最难的之一了，问得很深，简历上的每一个知识点你都必须深刻了解。可惜我时间不够，准备不充分，很多问题的细节都忘记了，而且代码题写了很久。唉，算法和基础一定要扎实。</p>
+</blockquote>
+<h3 id="技术一面-2"><a class="markdownIt-Anchor" href="#技术一面-2"></a> 技术一面</h3>
+<ul>
+<li>自我介绍</li>
+<li>聊机器人比赛</li>
+<li>Faster rcnn 正负样本怎么确定，用什么阈值，怎么训练，一开始 RPN 没有负样本的话有什么现象</li>
+<li>为什么选cascade_rcnn ，cascade_rcnn 解决了什么，对Faster_rcnn 有什么改进，怎么改进</li>
+<li>ohem 讲一下流程</li>
+<li>给定一段视频，如何检测这个视频中出现了多少不重复的人？回答一帧帧检测，第一帧检测到的人存入数据库，下一帧进行比对。</li>
+<li>如果要提速怎么做？网络加速，抽帧检测，做降维，做跟踪。</li>
+<li>有无查阅论文解决问题的经验</li>
+<li>代码题 计算 IOU 函数</li>
+</ul>
+<h3 id="技术二面-2"><a class="markdownIt-Anchor" href="#技术二面-2"></a> 技术二面</h3>
+<ul>
+<li>自我介绍</li>
+<li>map 怎么计算？precision 和 recall 怎么算？</li>
+<li>代码题：写一个函数，计算 ap</li>
+<li>Resnet 结构 画一下</li>
+<li>FPN 结构说一下，具体怎么做的？有什么作用？</li>
+<li>讲一下GAN，GAN怎么训练的？</li>
+<li>用Pytorch 写一个 DNN 模型</li>
+<li>激活函数的作用，sigmod 数学公式写一下</li>
+</ul>
+<h2 id="商汤科技-计算机图形算法实习生"><a class="markdownIt-Anchor" href="#商汤科技-计算机图形算法实习生"></a> 商汤科技 - 计算机图形算法实习生</h2>
+<blockquote>
+<p>目前最难了。。。没有问深度学习，完全 C++ 和传统的图像处理算法和三维视觉，很多需要你深刻理解它的数学公式。。。而且快速排序太久没写也写不出。。。我以为应该凉了，没想到进了二面。。。不过面试官很不错，会给我提示，遇到不会的也说没关系，还给我提了一些建议。</p>
+</blockquote>
+<h3 id="技术一面-3"><a class="markdownIt-Anchor" href="#技术一面-3"></a> 技术一面</h3>
+<ul>
+<li>自我介绍</li>
+<li>自动瞄准介绍一下</li>
+<li>用了什么阈值算法，大津算法原理，数学公式写一下</li>
+<li>相机标定介绍一下，写一下图像坐标系到世界坐标系的公式</li>
+<li>SolvePnP 的 DLT，BN 怎么算的，</li>
+<li>指针和引用的区别</li>
+<li>常见的类型转换说一下，dynamic<cast> 有什么用</cast></li>
+<li>malloc/free 和 new/delete 的区别</li>
+<li>C++ 面向对象的特性</li>
+<li>多态怎么实现，原理是什么，写一个纯虚函数，纯虚函数底层</li>
+<li>STL库用得多吗？说一下 vector 中的 push_back 和 emplace_back 的区别</li>
+<li>有什么常见的视觉特征，说一下角点检测，surf 这些算法</li>
+<li>有什么插值算法？怎么做的？</li>
+<li>给你一个点和三角形，如何判断点在三角形中还是外</li>
+<li>编程题：写快速排序</li>
+<li>编程题：一个矩阵，后面的比前面的值大，如何快速查找一个值？</li>
+</ul>
+<h2 id="思谋科技-ai算法实习生"><a class="markdownIt-Anchor" href="#思谋科技-ai算法实习生"></a> 思谋科技 - AI算法实习生</h2>
+<blockquote>
+<p>这个是面得最快的了，主要问的是 C++ ,它说还可以，but 两天了都没消息。</p>
+</blockquote>
+<ul>
+<li>自我介绍</li>
+<li>cascade_rcnn 介绍</li>
+<li>有没有用过智能指针，怎么实现的？</li>
+<li>讲一下C++的堆栈</li>
+<li>说一下C++ 封装、继承、多态</li>
+</ul>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<ul>
+<li>简历上的每一个知识点都要深刻熟练的理解</li>
+<li>编程能力要好好提高，算法，leetcode 好好刷。</li>
+<li>基础知识要扎实。</li>
+</ul>
 
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
-                    
-                        <li class="previous">
-                            <a href="/2020/10/21/保研经历/" data-toggle="tooltip" data-placement="top" title="2020 保研经历">&larr; Previous Post</a>
-                        </li>
                      
                     
                         <li class="next">
-                            <a href="/2020/10/19/hello-2020/" data-toggle="tooltip" data-placement="top" title="hexo + github pages + hux 主题 博客搭建">Next Post &rarr;</a>
+                            <a href="/2020/10/31/机器学习-01模型评估与选择/" data-toggle="tooltip" data-placement="top" title="机器学习-01模型评估与选择">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -273,7 +475,7 @@ $ git config --global core.autocrlf true
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#问题"><span class="toc-nav-text"> 问题</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#后记"><span class="toc-nav-text"> 后记</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#大象机器人-python实习生拿到offer"><span class="toc-nav-text"> 大象机器人 - Python实习生（拿到offer）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#hr面"><span class="toc-nav-text"> HR面</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#技术面"><span class="toc-nav-text"> 技术面</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#即构科技-ai图像视频实习生拿到offer"><span class="toc-nav-text"> 即构科技 - AI图像视频实习生（拿到offer）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#技术一面"><span class="toc-nav-text"> 技术一面</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#技术二面"><span class="toc-nav-text"> 技术二面</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#普渡机器人-感知算法实习生-拿到offer"><span class="toc-nav-text"> 普渡机器人 - 感知算法实习生 （拿到offer）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#tcl工业研究院-ai算法实习生-拿到offer"><span class="toc-nav-text"> TCL工业研究院 - AI算法实习生 （拿到offer）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#腾讯音乐-多媒体算法实习生-拿到-offer"><span class="toc-nav-text"> 腾讯音乐 - 多媒体算法实习生 （拿到 offer）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#腾讯广告-计算机视觉算法实习生拿到-offer"><span class="toc-nav-text"> 腾讯广告 - 计算机视觉算法实习生（拿到 offer)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#技术一面-2"><span class="toc-nav-text"> 技术一面</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#技术二面-2"><span class="toc-nav-text"> 技术二面</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#商汤科技-计算机图形算法实习生"><span class="toc-nav-text"> 商汤科技 - 计算机图形算法实习生</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#技术一面-3"><span class="toc-nav-text"> 技术一面</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#思谋科技-ai算法实习生"><span class="toc-nav-text"> 思谋科技 - AI算法实习生</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#总结"><span class="toc-nav-text"> 总结</span></a></li></ol>
         
         </div>
       </aside>
@@ -293,7 +495,7 @@ $ git config --global core.autocrlf true
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#git" title="git">git</a>
+                          <a class="tag" href="/tags/#sharing" title="sharing">sharing</a>
                         
                     </div>
                 </section>
