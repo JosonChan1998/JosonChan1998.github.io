@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <!-- change the icon in the website --> 
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          变量与基本类型 - JosonChan | JosonTech
+        
+    </title>
+
+    <link rel="canonical" href="https://JosonChan1998.github.io/2020/11/01/变量与基本类型/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+      <!-- The loading of KaTeX is deferred to speed up page rendering -->
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+      <!-- To automatically render math in text elements, include the auto-render extension: -->
+      <!-- <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" -->
+        <!-- onload="renderMathInElement(document.body);"></script> -->
+    
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('/img/post-bg-2015.jpg')
+            /*post*/
+        
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#C++" title="C++">C++</a>
+                            
+                        </div>
+                        <h1>变量与基本类型</h1>
+                        <h2 class="subheading">&quot;实践出真知&quot;</h2>
+                        <span class="meta">
+                            Posted by JosonChan on
+                            2020-11-01
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">JosonChan&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About Me</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <blockquote>
+<p>最近开始看 《C++ Primer》，希望对C++重新回顾一下。需要强调一点，数据类型告诉我们数据的意义以及能够在数据上进行的操作。</p>
+</blockquote>
+<p>[toc]</p>
+<h2 id="基本类型的选择"><a class="markdownIt-Anchor" href="#基本类型的选择"></a> 基本类型的选择</h2>
+<ul>
+<li>如果知道值非负，选用无符号类型</li>
+<li>尽量使用 int 而非 short，如果范围超过 int ，则使用 long long</li>
+<li>算术表达式中尽量不使用 char 和 bool</li>
+<li>浮点数尽可能使用 double 而非 float</li>
+</ul>
+<h2 id="声明与定义"><a class="markdownIt-Anchor" href="#声明与定义"></a> 声明与定义</h2>
+<p>声明（declaration）规定了变量的类型和名字，简单来说就是告诉编译器存在这个东西。而定义（definition）的除了声明之外，还要给变量分配内存，也有可能为变量赋一个初始值，也就是为这个变量创建一个实体。</p>
+<p>如果想要声明一个变量而非定义它，需要在变量前加上 extern。</p>
+<pre class="highlight"><code class="c++">extern int i;
+int j;
+extern int i = 0;// 初始化之后声明失效，也就变成定义了。
+</code></pre>
+<p>首先我们要知道不能够重复定义一个相同名字的变量：</p>
+<pre class="highlight"><code class="c++">int i = 0;
+int i = 1;
+</code></pre>
+<p>编译之后：</p>
+<pre class="highlight"><code class="bash">main.cpp:197:5: error: redefinition of ‘int i’
+ int i = 0;
+     ^
+main.cpp:195:5: note: ‘int i’ previously defined here
+ int i = 1;
+</code></pre>
+<p>如果想要在多个文件中使用同一个变量，就要把声明和定义分离。这个共享变量只能有一次定义，在其他地方使用的时候就要声明它。</p>
+<p>在 <code>test.hpp</code>写上</p>
+<pre class="highlight"><code class="c++">#pragma once
+#include &lt;iostream&gt;
+
+int i = 100;
+</code></pre>
+<p>在<code>main.cpp</code></p>
+<pre class="highlight"><code class="c++">#include &lt;iostream&gt;
+#include &quot;test.hpp&quot;
+int main(){
+    extern int i;
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+}
+</code></pre>
+<h2 id="指针与引用"><a class="markdownIt-Anchor" href="#指针与引用"></a> 指针与引用</h2>
+<h3 id="引用"><a class="markdownIt-Anchor" href="#引用"></a> 引用</h3>
+<p>引用指的是一个变量的别名，通过引用可以把一个别名绑定到一个变量上。一旦初始化完成，引用将与引用的变量一直绑定在一起，不可改变。因为无法重新绑定，所以引用必须初始化。此时对 b 的修改都将直接影响 a。</p>
+<pre class="highlight"><code class="C++">int a = 10;
+int &amp;b = a;
+
+double c = 3.3;
+int &amp;d = c;// 错误，类型不匹配
+</code></pre>
+<p>除了<code>const</code> 引用之外（还有一种情况）之外，引用的类型都要和与之绑定的对象严格匹配。引用经常用在作为函数的参数进行传递，当我们希望传入的参数在函数内直接发生改变的时候，使用引用可以做到。同时这样做的好处在于，按值传递参数的时候，需要创建临时变量，然后将值赋给临时变量，如果说是我们自己定义的类的话，就需要调用拷贝构造函数，这种时候会非常耗时而且浪费，于是可以使用引用来解决。</p>
+<pre class="highlight"><code class="C++">#include &lt;iostream&gt;
+using namespace std;
+void fun(int &amp;a){
+    a++;
+}
+int main(){
+    int a = 10;
+	fun(a);
+	cout &lt;&lt; a &lt;&lt; endl; 
+}
+</code></pre>
+<p>同时如果我们不希望传递进去的参数发生改变，可以使用 <code>const</code>进行限制，这样即减少了时间浪费，也避免了参数被修改。</p>
+<pre class="highlight"><code class="c++">void fun(const int &amp;a);
+</code></pre>
+<h3 id="引用的底层实现"><a class="markdownIt-Anchor" href="#引用的底层实现"></a> 引用的底层实现</h3>
+<p>原本我以为引用是变量的别名，在内存中操作的是同一个地址。但是通过实验发现并不是:</p>
+<pre class="highlight"><code class="c++">#include &lt;iostream&gt;
+int main(){
+   int a = 10;
+   int &amp;b = a;
+   int *c = &amp;a;
+
+   b++;
+   (*c)++;
+}
+</code></pre>
+<p>汇编代码：</p>
+<pre class="highlight"><code class="assembly">push    rbp
+mov     rbp, rsp
+mov     DWORD PTR [rbp-20], 10
+lea     rax, [rbp-20]
+mov     QWORD PTR [rbp-8], rax
+lea     rax, [rbp-20]
+mov     QWORD PTR [rbp-16], rax
+mov     rax, QWORD PTR [rbp-8]
+mov     eax, DWORD PTR [rax]
+lea     edx, [rax+1]
+mov     rax, QWORD PTR [rbp-8]
+mov     DWORD PTR [rax], edx
+mov     rax, QWORD PTR [rbp-16]
+mov     eax, DWORD PTR [rax]
+lea     edx, [rax+1]
+mov     rax, QWORD PTR [rbp-16]
+mov     DWORD PTR [rax], edx
+mov     eax, 0
+pop     rbp
+ret
+</code></pre>
+<p>我们可以看到引用和指针都开辟了一个内存空间，分别是[rbp-8]以及[rbp-16]，后面的自增操作也是在这两个地址上进行的。所以从汇编的角度看，其实都是需要开辟内存的。但是从语言的角度上看，可以把引用理解成一个const 指针，不可改变指向的对象。</p>
+<p>详解：<a href="https://zhuanlan.zhihu.com/p/89175296" target="_blank" rel="noopener">简谈 C++ 中指针与引用的底层实现</a></p>
+<h3 id="指针"><a class="markdownIt-Anchor" href="#指针"></a> 指针</h3>
+<p>指针是一个变量，它本身需要分配内存空间，同时存储的是一个地址。它的内存大小由机器的寻址长度决定。比如机器的寻址长度为64位，则指针的内存大小为8个字节。同时指针具有不同的类型，比如 int ，double，因为不同的类型的变量占用的内存大小不一样，因此在指针操作的时候（比如自增运算符）需要知道往前移动多少。</p>
+<pre class="highlight"><code class="C++">int a[10] = {0};
+int *b = a;
+double c = 1.0;
+double *d = &amp;c;
+cout &lt;&lt; &amp;a &lt;&lt; endl;// a数组的地址
+cout &lt;&lt; b &lt;&lt; endl;// b的值，也就是a数组的地址
+cout &lt;&lt; &amp;b &lt;&lt; endl; // b本身的地址
+cout &lt;&lt; (++b) &lt;&lt; endl;// 输出自增之后的地址，也就是 a[1],一个 int 占四个字节
+cout &lt;&lt; &amp;b &lt;&lt; endl;// 地址是不会变的，因为存储的b这个变量的地址
+cout &lt;&lt; sizeof(b) &lt;&lt;endl;
+cout &lt;&lt; sizeof(d) &lt;&lt;endl;//  两个不同类型的指针变量占用内存空间相等
+</code></pre>
+<p>得到输出：</p>
+<pre class="highlight"><code class="bash">0x7ffffa8919d0
+0x7ffffa8919d0
+0x7ffffa8919b8
+0x7ffffa8919d4
+0x7ffffa8919b8
+8
+8
+</code></pre>
+<p>同时，指针还可以变量生命期间指向不同的对象，也无须赋初始值。</p>
+<pre class="highlight"><code class="C++">int a = 10;
+int *c = nullptr;
+int *d = &amp;a;
+*d = c;
+</code></pre>
+<h4 id="void-指针"><a class="markdownIt-Anchor" href="#void-指针"></a> void* 指针</h4>
+<p>void* 指针可以存放任意对象的地址。但是我们不能够知道它的类型是什么，也就是说我们会给这个 <code>void*</code> 指针分配一个寻址长度大小的内存空间，然后存放一个地址，但是我们并不知道它的类型，也就不清楚它能够支持的操作。</p>
+<p>利用void* 指针只能用来作为函数的输入和输出，或者赋给另一个void*指针，拿它和别的指针相比较，不能操作它的对象。</p>
+<pre class="highlight"><code class="c++">double obj = 3.14,*pd = &amp;obj;
+void* test = pd;
+test = &amp;obj;
+</code></pre>
+<h2 id="复合类型的声明"><a class="markdownIt-Anchor" href="#复合类型的声明"></a> 复合类型的声明</h2>
+<p>基本类型的修饰符有 <code>&amp;</code> 和 <code>*</code>，需要注意的是每一个修饰符只对一个变量起作用：</p>
+<pre class="highlight"><code class="c++">int *a = nullptr,b = 10;// 这里a 是一个int型的指针， b是int型
+</code></pre>
+<p>引用本身不是一个对象，因此不能定义指向引用的指针。但是指针是对象，所以存在对指针的引用。面对一条比较复杂的指针或者引用的声明语句时，从右到左进行阅读。</p>
+<pre class="highlight"><code class="c++">int *a = nullptr;
+int &amp;*b = a;// 从右开始，b是一个指针，但是不存在指向引用（int &amp;）的指针，因此错误
+int *&amp;c = a;// 从右开始，c是一个引用，存在一个指针变量的引用
+</code></pre>
+<h2 id="const-关键字"><a class="markdownIt-Anchor" href="#const-关键字"></a> const 关键字</h2>
+<p>const 修饰变量之后，该变量不能被改变，同时 const 被创建之后其值不能被改变，因此const 变量一定需要初始化。</p>
+<pre class="highlight"><code class="C++">const int a = 10;// 正确
+const int b; // 错误，没有初始化
+int c = a;// 可以使用一个const int 取初始化 int，只要不存在有改变 const int 的值的操作，顶层const
+</code></pre>
+<p>当以编译时初始化的方式定义一个 const 对象时，编译器将在编译中把用到该变量的地方都替换成对应的值。也就是编译器会找到代码中所有使用该const变量的地方，用初始化数值进行替换：</p>
+<pre class="highlight"><code class="assembly">#include &lt;iostream&gt;
+int main(){
+    const int a = 100;
+    int b = 100;
+    int c = a;
+    int d = b;
+}
+
+push    rbp
+mov     rbp, rsp
+mov     DWORD PTR [rbp-4], 100 # 创建 const a 变量，初始化 100
+mov     DWORD PTR [rbp-8], 100 # 创建 b 变量，初始化 100
+mov     DWORD PTR [rbp-12], 100 # 编译器直接将100 替换成 a
+mov     eax, DWORD PTR [rbp-8] # 由于不是 const，所以先使用了ax寄存器
+mov     DWORD PTR [rbp-16], eax
+mov     eax, 0
+pop     rbp
+ret
+</code></pre>
+<h3 id="const-仅在本文件内生效"><a class="markdownIt-Anchor" href="#const-仅在本文件内生效"></a> const 仅在本文件内生效</h3>
+<blockquote>
+<p>涉及到编译和链接部分，等学习 CSAPP 再来详解。</p>
+</blockquote>
+<h3 id="const-引用"><a class="markdownIt-Anchor" href="#const-引用"></a> const 引用</h3>
+<p>const 引用，也就是对 const 常量的引用（reference to const）：</p>
+<pre class="highlight"><code class="c++">const int a = 10;
+const int &amp;b = a;// 正确 
+int &amp;c = a;// 错误，一个常量的引用不可指向一个非常量引用
+</code></pre>
+<p>在初始化const 引用时允许用任意表达式作为初始值，只要该表达式的结果能够转换成引用的类型即可。允许令一个常量的引用绑定一个非常量的对象。</p>
+<pre class="highlight"><code class="assembly">#include &lt;iostream&gt;
+int main(){
+    double b = 10.0;
+    const int &amp;a = b; # # 这里是 double, 因此会创建一个临时量 const int temp = b;再把 a 绑定到 temp 上。
+    b = b + 10;
+    std::cout &lt;&lt; a &lt;&lt; std::endl;# 输出还是为10
+}
+# 汇编结果
+push    rbp
+mov     rbp, rsp
+sub     rsp, 32
+movsd   xmm0, QWORD PTR .LC0[rip]
+movsd   QWORD PTR [rbp-8], xmm0 # b变量开辟了[rbp-8]
+movsd   xmm0, QWORD PTR [rbp-8]
+cvttsd2si       eax, xmm0
+mov     DWORD PTR [rbp-20], eax # 由于创建了一个临时量[rbp-20]
+lea     rax, [rbp-20]
+mov     QWORD PTR [rbp-16], rax # 引用开辟了一个内存空间，绑定了临时量 [rbp-20]
+mov     rax, QWORD PTR [rbp-16]
+mov     eax, DWORD PTR [rax]
+mov     esi, eax
+mov     edi, OFFSET FLAT:_ZSt4cout
+call    std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::operator&lt;&lt;(int)
+mov     esi, OFFSET FLAT:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+mov     rdi, rax
+call    std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;::operator&lt;&lt;(std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;&amp; (*)(std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;&amp;))
+mov     eax, 0
+leave
+ret
+</code></pre>
+<p>通过以上的分析可以知道，如果初始化引用的时候使用了不同的类型会导致引用绑定到临时量，对临时量的修改并不能改变原来的那个值，也就和我们的初衷相反了。而由于const引用是一个常量，没有影响，所以允许。但是常量引用仅对引用可以参与的操作做出了决定，对于引用的对象本身是不是常量没有做限定，因为对象可能并非是一个常量，允许通过其他途径修改。</p>
+<pre class="highlight"><code class="c++">#include &lt;iostream&gt;
+int main(){
+    int b = 10;
+    const int &amp;a = b; // int 类型转常量引用并没有绑定临时量。
+    b = b + 10;
+    std::cout &lt;&lt; a &lt;&lt; std::endl;// 输出为 20 。
+}
+</code></pre>
+<pre><code>### 指向常量的指针
+</code></pre>
+<p>指向常量的指针（pointer to const），指的是这个变量是一个指针，但是指向一个常量， 所以不能修改指针指向对象的值，但是可以修改指针指向谁。</p>
+<pre class="highlight"><code class="c++">const int a = 10;
+const int *p = nullptr;
+p = &amp;a;
+(*p)++;// 错误不能修改值
+</code></pre>
+<p>和对常量的引用一样，允许令一个指向常量的指针指向一个非常量的对象。</p>
+<p>和对常量的引用一样，指向常量的指针仅仅是该变量不能修改指向对象的值，而没有规定那个对象的值不能通过其他方式更改。</p>
+<pre class="highlight"><code class="C++">int a = 10;
+const int *p = &amp;a;// 指向一个非常量的对象
+a++;
+cout &lt;&lt; *p &lt;&lt; endl;// 输出为 11
+</code></pre>
+<h3 id="常量指针"><a class="markdownIt-Anchor" href="#常量指针"></a> 常量指针</h3>
+<p>常量指针（const pointer），由于指针本身是一个对象，因此就存在指针的常量，意思就是该指针的值不能改变，也就是指向地址不能改，也就是指向的对象不能改变，所以常量指针必须初始化。</p>
+<pre class="highlight"><code class="c++">int a = 10;
+int *const b = &amp;a;
+(*b)++;//可以修改
+b = nullptr;// 不允许修改
+</code></pre>
+<h3 id="指向常量的常量指针"><a class="markdownIt-Anchor" href="#指向常量的常量指针"></a> 指向常量的常量指针</h3>
+<p>也就是说，值不能修改，指向对象不能修改。</p>
+<pre class="highlight"><code class="c++">const int *const p = nullptr;
+</code></pre>
+<h3 id="顶层-const-与-底层-const"><a class="markdownIt-Anchor" href="#顶层-const-与-底层-const"></a> 顶层 const 与 底层 const</h3>
+<ul>
+<li>
+<p>顶层const指的是该变量本身是常量，不可改变。一般的数据类型或者常量指针都是顶层的const。</p>
+</li>
+<li>
+<p>底层const指的是指向的对象不可改变。指向常量的指针以及绑定常量的引用都是底层的const。</p>
+</li>
+</ul>
+<p>在执行拷贝操作的时候，顶层const可以忽略，但是底层const不可忽略，拷入和拷出的对象必须具有相同的底层const资格，或者两个对象的数据类型能够转换。一般来说，非常量可以转为常量，反之则不行。</p>
+<h3 id="const-的实现"><a class="markdownIt-Anchor" href="#const-的实现"></a> const 的实现</h3>
+<p>由编译器检查。在PC上，const变量在RAM里，但是像</p>
+<pre class="highlight"><code class="c++">const char *a=&quot;hello world&quot;;
+</code></pre>
+<p>这样声明的变量，系统会加载到内存并把页面属性设成只读，const_cast 后改写程序会崩溃（如果实在想改可以用系统API把页面属性改成读写）。如果是const传递的C++对象，const_cast后改写没什么问题。<br>
+在某些设备上，const 修饰的变量可能会存在ROM/Flash里，这些存储介质不能通过内存写操作这届改写，因此万一存在只读介质上，const_cast以后强制写会发生未定义的行为，一般是崩溃掉。</p>
+<p>引用：<a href="https://www.zhihu.com/question/23006995" target="_blank" rel="noopener">const实现原理</a></p>
+<h3 id="constexpr-变量"><a class="markdownIt-Anchor" href="#constexpr-变量"></a> constexpr 变量</h3>
+<p>C++11 规定，允许将变量声明为constexpr类型以便编译器来验证变量的值是否是一个常量表达式，一般来说，如果你认定变量是一个常量表达式，那就把它声明成 constexpr。</p>
+<h2 id="类型别名"><a class="markdownIt-Anchor" href="#类型别名"></a> 类型别名</h2>
+<p>typedef 关键字以及C<ins>新增的 using 关键字，在C</ins>11中尽量使用 using。</p>
+<pre class="highlight"><code class="c++">typedef double wages;
+using wages = double;
+</code></pre>
+<p>在C++11中尽量使用 using，同时需要注意复合类型的别名，比如指针或者引用的别名。</p>
+<pre class="highlight"><code class="c++">using intptr = int*;
+int b = 10;
+const intptr a = &amp;b; // 不能简单替换！！！需要注意intptr 就是指针类型，不可将它变成 const int *a !!!
+(*a)++;// 它是常量指针！！！
+</code></pre>
+<h2 id="auto-与-decltype"><a class="markdownIt-Anchor" href="#auto-与-decltype"></a> auto 与 decltype</h2>
+<p>C++ 11新增的一个类型，可以根据编译器自行推算出结果的类型。同时，对于顶层const一般会忽略掉，同时底层的const会保留。同时需要初始化它。</p>
+<p>当你需要某个表达式的返回值类型而又不想实际执行它时用 decltype。</p>
+<pre class="highlight"><code class="c++">int a = 8,b = 3;
+auto c = a + b;
+decltype(a+b) d;
+</code></pre>
+<h2 id="头文件保护符"><a class="markdownIt-Anchor" href="#头文件保护符"></a> 头文件保护符</h2>
+<p>头文件没有被包含的话，也需要设置保护符，需要养成习惯，防止变量函数类重复定义。</p>
+<p>有两种，一种是从C语言继承来的预处理变量，另一种是 #pragma once</p>
+<pre class="highlight"><code class="c++">#ifndef TEST_HPP
+#define TEST_HPP
+// 定义与声明
+#endif
+
+#pragma once
+</code></pre>
+<p><strong>在编写头文件的时候，尽量不要使用 using namespace ，因为头文件被其他文件包含之后会产生歧义。</strong></p>
+
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2020/11/08/图像处理岗面经/" data-toggle="tooltip" data-placement="top" title="计算机视觉实习-面经">&larr; Previous Post</a>
+                        </li>
+                     
+                    
+                        <li class="next">
+                            <a href="/2020/11/01/vector 和 string/" data-toggle="tooltip" data-placement="top" title="vector 和 string">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- Gitalk start -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+                <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+                <div id="gitalk-container"></div>
+                <script src="/js/md5.min.js"></script>
+                <script type="text/javascript">
+                    var gitalk = new Gitalk({
+                    clientID: '3d734b9ad4a0a2efad33',
+                    clientSecret: 'e1490d5ba1918bf8fadada6f4ace1e575768e578',
+                    repo: 'josonchan1998.github.io',  //如 'convivae.github.io'
+                    owner: 'josonchan1998',
+                    admin: ['josonchan1998'], //这是个字符串数组，可填写多个
+                    id: md5(location.pathname),      // 页面的唯一标识。长度必须小于50，默认是文章路径
+                    distractionFreeMode: true  // 类似Facebook评论框的全屏遮罩效果.
+                    });
+                    gitalk.render('gitalk-container');
+                </script>
+                <!-- Gitalk end -->
+            </div>    
+            
+            <!-- Table of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基本类型的选择"><span class="toc-nav-text"> 基本类型的选择</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#声明与定义"><span class="toc-nav-text"> 声明与定义</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#指针与引用"><span class="toc-nav-text"> 指针与引用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#引用"><span class="toc-nav-text"> 引用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#引用的底层实现"><span class="toc-nav-text"> 引用的底层实现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#指针"><span class="toc-nav-text"> 指针</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#void-指针"><span class="toc-nav-text"> void* 指针</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#复合类型的声明"><span class="toc-nav-text"> 复合类型的声明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#const-关键字"><span class="toc-nav-text"> const 关键字</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#const-仅在本文件内生效"><span class="toc-nav-text"> const 仅在本文件内生效</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#const-引用"><span class="toc-nav-text"> const 引用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#常量指针"><span class="toc-nav-text"> 常量指针</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#指向常量的常量指针"><span class="toc-nav-text"> 指向常量的常量指针</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#顶层-const-与-底层-const"><span class="toc-nav-text"> 顶层 const 与 底层 const</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#const-的实现"><span class="toc-nav-text"> const 的实现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#constexpr-变量"><span class="toc-nav-text"> constexpr 变量</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#类型别名"><span class="toc-nav-text"> 类型别名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#auto-与-decltype"><span class="toc-nav-text"> auto 与 decltype</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#头文件保护符"><span class="toc-nav-text"> 头文件保护符</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#C++" title="C++">C++</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://JosonChan1998.github.io" target="_blank">JosonChan&#39;s Blog</a></li>
+                    
+                        <li><a href="http://beantech.org" target="_blank">Bean Tech</a></li>
+                    
+                        <li><a href="http://blog.kaijun.rocks" target="_blank">Kaijun&#39;s Blog</a></li>
+                    
+                        <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/chan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/JosonChan1998">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                   
+                    Copyright &copy; JosonChan 2021 
+                    <br>
+                    Theme by <a href="http://beantech.org">BeanTech</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="https://josonchan1998.github.io">JosonChan</a>
+                    <br>
+                    <!-- <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
+                    </iframe> -->
+
+                    <!-- use busuanzi to count the number of visited -->
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                     <!-- end of uese busuanzi -->
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv">
+                        本站访客数<span id="busuanzi_value_site_uv"></span>人次
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://JosonChan1998.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+    <!-- add the highlight -->
+    
+        <!-- Highlight.js -->
+        <!-- <link href="http://cdn.bootcss.com/highlight.js/10.1.0/styles/atom-one-dark.min.css" rel="stylesheet"> -->
+        <!-- <script src="http://cdn.bootcss.com/highlight.js/10.1.0/highlight.min.js"></script> -->
+        <link rel="stylesheet" href="/css/highlightjs.min.css">
+        <script src="/js/highlight.min.js"></script>
+        <script >hljs.initHighlightingOnLoad();</script>
+    
+    <!-- end of adding the highlight -->
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="https://JosonChan1998.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

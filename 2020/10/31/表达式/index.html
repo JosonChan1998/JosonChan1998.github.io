@@ -15,11 +15,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          2020 保研经历 - JosonChan | JosonTech
+          表达式 - JosonChan | JosonTech
         
     </title>
 
-    <link rel="canonical" href="https://JosonChan1998.github.io/2020/10/21/保研经历/">
+    <link rel="canonical" href="https://JosonChan1998.github.io/2020/10/31/表达式/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -73,7 +73,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('post-bg-2015.jpg')
+            background-image: url('/img/post-bg-2015.jpg')
             /*post*/
         
     }
@@ -90,14 +90,14 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#杂谈" title="杂谈">杂谈</a>
+                              <a class="tag" href="/tags/#C++" title="C++">C++</a>
                             
                         </div>
-                        <h1>2020 保研经历</h1>
-                        <h2 class="subheading"> &quot;但行好事，莫问前程&quot; </h2>
+                        <h1>表达式</h1>
+                        <h2 class="subheading"> &quot;表达式的知识点&quot; </h2>
                         <span class="meta">
                             Posted by JosonChan on
-                            2020-10-21
+                            2020-10-31
                         </span>
                     </div>
                 
@@ -214,99 +214,183 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="个人情况"><a class="markdownIt-Anchor" href="#个人情况"></a> 个人情况</h2>
+                <p>[toc]</p>
+<h2 id="求值顺序"><a class="markdownIt-Anchor" href="#求值顺序"></a> 求值顺序</h2>
+<p>优先级规定了运算符的组合方式，结合律规定了同级别的运算符之间的组合方式，但是运算对象之间并没有按照什么顺序进行求值。</p>
+<pre class="highlight"><code class="c++">int i = f1() * f2();
+</code></pre>
+<p><code>f1()</code> 和 <code>f2()</code> 一定会在执行乘法之间被调用，但是不能够确定 <code>f1()</code> 在 <code>f2()</code> 之前被调用还是 <code>f2()</code> 在 <code>f1()</code> 之前被调用。</p>
+<p>运算对象的求值顺序与优先级和结合律无关，在一条形如 <code>f() + g() * h() + j()</code> 的表达式中：</p>
 <ul>
-<li>本科院校：深圳大学</li>
-<li>专业：电子信息工程</li>
-<li>成绩：3/163，2%</li>
-<li>英语：四级503，六级437</li>
-<li>获奖经历：两届全国大学生机器人大赛一等奖，几个校级奖项</li>
-<li>参营情况：云南大学软件学院、中南大学计算机学院专硕</li>
-<li>预推免情况：西安电子科技大学通信学院（放弃）、南京理工大学计算机专硕（放弃）、中科院信工所国重专硕、中科院网络信息中心专硕（放弃）、中科院深圳先进技术研究所数字所专硕、电子科技大学计算机学院专硕、北航电子信息专硕（放弃）</li>
-<li>offer情况：除了放弃的都拿到</li>
-<li>最终去向：电子科技大学计算机学院</li>
+<li>优先级规定， <code>g()</code> 与 <code>h()</code>相乘</li>
+<li>结合律规定，<code>f()</code> 的返回值与 <code>g()</code> 和 <code>h()</code> 的乘积相加，所得结果再与 <code>j()</code> 的返回值相加。</li>
+<li>对于这些函数的调用顺序没有明确规定。</li>
 </ul>
-<h2 id="写在前面的话"><a class="markdownIt-Anchor" href="#写在前面的话"></a> 写在前面的话</h2>
-<p>保研终于结束了，从6月份到10月份，经历了保研名额的不确定，夏令营的低谷，再到预推免的波折，每一个阶段都在不断消耗、打击着我的耐心和信心。可以说，每天起来的第一件事就是看邮箱，有没有老师回我，有没有学校回我。但无论如何，每当沮丧，想要放弃的时候，总有朋友的鼓励和陪伴，总算是坚持下来了，最后也去了一个还不错的学校。在这里也非常感谢一路上帮助过我的同学、师兄师姐、老师，也非常感谢家人支持，Anyway，感谢生命中遇到的每一个人。Never say never，希望接下来的三年努力干，不要让自己后悔，成功一个合格的研究生。</p>
-<h2 id="前期准备"><a class="markdownIt-Anchor" href="#前期准备"></a> 前期准备</h2>
-<h3 id="1-确定自己保研的机会"><a class="markdownIt-Anchor" href="#1-确定自己保研的机会"></a> 1、确定自己保研的机会</h3>
-<p>对于不同的院校来说有不同的保研比例，当我们确定想要走保研这条路的时候，就要去确认自己保研的概率有多少。根据不同的概率取采取不同的策略。比如你是确定了保研或者有70%以上的概率可以保研，那么你就可以放心去冲刺更好的学校；如果你觉得自己保研的概率很低，那么我觉得夏令营可以去准备实习或者准备其他，然后等到九推的时候确定了话再冲，一旦没有保研，你还可以准备去工作或者出国等。</p>
-<h3 id="2-材料准备"><a class="markdownIt-Anchor" href="#2-材料准备"></a> 2、材料准备</h3>
-<p>每一个院校需要准备的电子材料或者纸质材料都不一样，但是大同小异，有一些我们可以确定：</p>
-<ul>
-<li>个人信息：身份证正反页、学生证正反页、教育部学籍在线验证报告</li>
-<li>成绩信息：专业排名证明、总成绩单、英语四六级成绩单</li>
-<li>文书信息：中英个人简历（A4纸）、中英个人陈述（1500字）、推荐信模型</li>
-<li>获奖证书：大学期间所获得的荣誉证书</li>
-<li>照片：个人一寸的证件照</li>
-<li>邮件模板：联系心仪导师的模板</li>
-</ul>
-<p>以上内容最好是在4-5月份就完成，后面不断地进行完善。</p>
-<h3 id="3-影响因素"><a class="markdownIt-Anchor" href="#3-影响因素"></a> 3、影响因素</h3>
-<p>对于学生来说，影响参营的通过率的因素排行往往是：院校 &gt; 专业排名 &gt; 英语成绩 &gt; 科研经历 &gt; 各类竞赛、实习、项目。所以说对于保研的同学的话，绩点是非常重要的，有些院校甚至规定要专业的第一名。同时很多院校都会卡你的四六级。因此还有机会的话，尽可能提高自己的绩点以及英语成绩，其他的内容有的话肯定是更好的。</p>
-<h3 id="4-参营准备"><a class="markdownIt-Anchor" href="#4-参营准备"></a> 4、参营准备</h3>
-<p>对于计算机来说，需要准备的有以下几个项目：中英自我介绍、英语对答、专业课程、编程能力、简历项目。</p>
-<p>对于中英自我介绍来说，我们需要自己准备一份1分钟版本以及2分钟版本的自我介绍；对于英语对答方面，我是搜索了一些经常会问到的题目并作准备，同时对自己简历上的项目点也用英语做了转变，以下是一些常见的问题：</p>
-<ul>
-<li>What’s your plan for the after 3 years?</li>
-<li>Which subject is the most useful?</li>
-<li>What’s your favorite computer language，and why?</li>
-<li>What’s your major,why do you choose computer science?</li>
-<li>Talk about your 4 years college life.</li>
-<li>Talk about your hometown?</li>
-<li>What’s your main course ?</li>
-<li>Why do you choose our school?</li>
-<li>Talk about your competition</li>
-<li>What do you do in the competition?</li>
-</ul>
-<p>对于专业课程的话，由于我是电信跨计算机且跨的方向为图像处理方向，因此我会去复习:</p>
+<p>如果这些函数，它们即不会改变同一个对象的状态也不执行IO任务，那么函数的调用顺序不受限制。反之，如果其中某几个函数影响同一个对象，则它是一条错误的表达式，将产生未定义的行为。</p>
+<p>因此如果改变了某个运算对象的值，在表达式的其他地方不要再使用这个运算对象。</p>
+<p><strong>C<ins>语言没有明确规定大多数二元运算符的求值顺序，给编译器优化留下了余地。这种策略实际上是在代码生成效率和程序潜在缺陷之间进行了权衡，C</ins>的设计思想是尽可能地“相信”程序员，将效率最大化。然而这种思想却有着潜在的危害，就是无法控制程序员自身引发的错误。因此 Java 的诞生也是必然，Java的思想就是尽可能地“不相信”程序员。</strong></p>
+<h2 id="赋值运算符"><a class="markdownIt-Anchor" href="#赋值运算符"></a> 赋值运算符</h2>
+<p>赋值运算采用的是右结合律，同时从右开始转换类型赋给左值。</p>
+<pre class="highlight"><code class="c++">int i = 0;
+double j = 0.0;
+j = i = 3.5;// i 等于 3,j也是3
+</code></pre>
+<h2 id="递增和递减运算符"><a class="markdownIt-Anchor" href="#递增和递减运算符"></a> 递增和递减运算符</h2>
+<p>前置递增运算符将对象本身作为左值返回，而后置递增运算符将对象原始值的副本作为右值返回。</p>
+<pre class="highlight"><code class="c++">int i = 0;
+int j = ++i;
+j = i++;
+</code></pre>
+<p>前置版本的递增操作避免了不必要的工作，它把值加1后直接返回改变了的运算对象。与之相比，后置版本需要将原始值存储下来以便于返回这个未修改的内容。如果我们不需要修改前的值，那么后置版本就浪费了。测试如下：</p>
+<pre class="highlight"><code class="c++">#include &lt;iostream&gt;
+int main(){
+    int i = 0;
+    int j = i++;
+    j = ++i;
+}
+</code></pre>
+<pre class="highlight"><code class="assembly">push    rbp
+mov     rbp, rsp
+mov     DWORD PTR [rbp-4], 0 # 给 i 变量初始化
+
+mov     eax, DWORD PTR [rbp-4]
+lea     edx, [rax+1]
+mov     DWORD PTR [rbp-4], edx
+mov     DWORD PTR [rbp-8], eax# 以上四步是 i++，需要存储原来的值
+
+add     DWORD PTR [rbp-4], 1
+mov     eax, DWORD PTR [rbp-4]
+mov     DWORD PTR [rbp-8], eax# 以上三步是++i，需要存储原来的值，因此省了一条汇编语句
+
+mov     eax, 0
+pop     rbp
+ret
+</code></pre>
+<h2 id="位运算符"><a class="markdownIt-Anchor" href="#位运算符"></a> 位运算符</h2>
+<p>位操作符作用于整数类型的运算对象，并把运算对象看成是二进制位的集合。如果运算对象是 “小整型”，则它的值会被自动提升成较大的整数类型。</p>
+<p>对于位运算符来说，符号位如何处理没有明确的规定，所以强烈建议仅将该位运算符用于处理无符号类型。</p>
+<h2 id="sizeof运算符"><a class="markdownIt-Anchor" href="#sizeof运算符"></a> sizeof运算符</h2>
+<p><code>sizeof</code> 运算符与 <code>decltype</code> 一样，并不实际计算其运算对象的值，而是在编译期间就被替换了。但是具体的实现查找了一下，并没有看懂，挖个坑吧。</p>
+<p>引用：<a href="https://www.zhihu.com/question/26090484" target="_blank" rel="noopener">sizeof是怎么实现的</a></p>
 <ul>
 <li>
-<p>数学基础：概率论与数理统计、高等数学、线性代数。</p>
+<p>对数组执行 <code>sizeof</code> 运算得到整个数组所占空间的大小，等价于数组中所有的元素各执行一次 <code>sizeof</code> 运算并将结果求和。注意：<code>sizeof</code> 并不会把数组转换成指针来处理</p>
+<pre class="highlight"><code class="c++">int ia[10] = {0};
+constexpr size_t ia_len = sizeof(ia)/sizeof(*ia);
+
+int nums[ia_len];
+</code></pre>
 </li>
 <li>
-<p>信号处理的基础：信号与系统、数字信号处理、数字图像处理。</p>
-</li>
-<li>
-<p>计算机的基础：操作系统、计算机网络、数据结构与算法。</p>
-</li>
-<li>
-<p>计算机视觉的基础：机器学习、深度学习。</p>
+<p>对 string 对象或者 vector 对象执行 <code>sizeof</code> 运算只返回该类型固定部分的大小，并不会计算对象中的元素占用了多少空间。</p>
 </li>
 </ul>
-<p>对于一些高校来说是会看重编程能力的，因此我们也需要取刷一些OJ的题目，如 leetcode 等。</p>
-<p>最后就是我们的简历上提到的一些项目或者知识点，最好是重新整理一下项目的实现流程以及一些技术的细节，做到有条不紊的叙述你的项目以及你在项目中所做的贡献。</p>
-<h3 id="5-信息收集"><a class="markdownIt-Anchor" href="#5-信息收集"></a> 5、信息收集</h3>
-<p>对于各种学校的夏令营或者预推免的信息，最好能够每天进行一次获取，防止错过了重要的院校投递时间。同时我们也应该获取一些心仪院校的面试经验，做到有的放矢。这里推荐保研人公众号，每天都会更新院校的信息以及一些经验贴。我们可以把我们心仪的院校使用一个表格来整理，然后按时投递信息。</p>
-<p>在收集的同时，我们也可以关注一些往年院校招收生源的信息，这样的话我们能够对自己有一个比较明确的定位，做到有的放矢。</p>
-<h2 id="夏令营经历"><a class="markdownIt-Anchor" href="#夏令营经历"></a> 夏令营经历</h2>
-<h3 id="云南大学软件学院"><a class="markdownIt-Anchor" href="#云南大学软件学院"></a> 云南大学软件学院</h3>
-<p>由于今年疫情的影响，很多学校都变成了线上面试。考核的方式是编程题+英语能力测试+面试回答，大概20分钟左右。</p>
-<p>首先是英语的测试，先让我做英文的自我介绍，然后让我用英语谈谈自己的专业以及专业的主要课程是什么。</p>
-<p>编程题目是采用随机抽签的方式，然后给你大概10分钟的时间进行编写，之后问你思路还有怎么优化。</p>
-<p>面试部分就是简单的询问是否能够保研。</p>
-<h3 id="中南大学-计算机学院"><a class="markdownIt-Anchor" href="#中南大学-计算机学院"></a> 中南大学 计算机学院</h3>
-<p>中南大学计算机学院今年也是采取线上的形式，在夏令营的时候给了很多offer，所以到最后是有可能出现没书读的情况，因此师弟师妹要看清楚邮件给你的发的offer，小心超发。</p>
-<p>采用线上面试，考核方式是英语能力测试+PPT自己介绍和提问，大概15分钟左右。</p>
-<p>首先是PPT的展示,大概8分钟左右。</p>
-<p>然后是英语自我介绍,然后根据我的自我介绍,用英语提问了我学习了什么机器学习算法，需要什么基础。</p>
-<p>然后老师针对PPT问了几个关于卷积神经网络的知识点。</p>
-<h2 id="预推免经历"><a class="markdownIt-Anchor" href="#预推免经历"></a> 预推免经历</h2>
-<h3 id="中科院信工所国重专硕"><a class="markdownIt-Anchor" href="#中科院信工所国重专硕"></a> 中科院信工所国重专硕</h3>
-<p>同样是线上的形式，考核形式是英语能力+专业知识，大概是15分钟。</p>
-<p>首先让我作英语自我介绍，然后英语提问了为什么选择我们学院以及谈谈我对自己专业的理解。</p>
-<p>然后针对简历进行提问，想问了访学的内容还有比赛的内容以及我在比赛中做了什么贡献。</p>
-<p>最后是问了导师选择好了没有，以及是否同意调剂。</p>
-<h3 id="中科院深圳先进技术研究所-数字所"><a class="markdownIt-Anchor" href="#中科院深圳先进技术研究所-数字所"></a> <strong>中科院深圳先进技术研究所 数字所</strong></h3>
-<p>同样是线上的形式，考核形式是英语能力+专业知识，大概是15分钟。</p>
-<p>首先是英文自我介绍，然后让我讲一下我的比赛以及我负责的东西。然后详细问了我关于比赛中使用的网络模型，以及优化的点还有准确率的提升。还问了冒泡排序和时间复杂度是多少，最后问了我是否还有其他的offer。</p>
-<h3 id="电子科技大学计算机学院专硕"><a class="markdownIt-Anchor" href="#电子科技大学计算机学院专硕"></a> 电子科技大学计算机学院专硕</h3>
-<p>计算机学院需要先提前联系好老师，后面其实是走流程了。然后考核的形式是英语能力+编程能力+专业知识，大概是15分钟。</p>
-<p>首先是英文的自我简述，大概是3分钟，把背景以及比赛等做了一些介绍。然后老师追问了两个非常规的英文题目，一个是这两届比赛中你都作了什么有什么区别？还有一个是让我作访学经历的总结。</p>
-<p>之后是随机挑选一道遍历矩阵的题目，大概10分钟，让我说出思路。</p>
-<p>最后就是根据项目和比赛等进行提问，主要是问比赛的形式以及取得的成绩等。</p>
-<h2 id="写给学弟学妹的话"><a class="markdownIt-Anchor" href="#写给学弟学妹的话"></a> 写给学弟学妹的话</h2>
-<p>我觉得对于想要保研的学弟学妹来说，最需要明确的一点是自己为了什么而读研。对于读研来说，可以大致分为三类人，第一类是别人读研我也要去读研，这一类型的人往往对于自己没有清晰的定位，或者说是迷茫。第二类是为了补救大学的虚度，缓解就业的压力，有的同学可能觉得自己在大学期间什么也没有学到，觉得自己并没有这个能力来应聘自己心仪的岗位，于是就想在研究生进行逆袭。第三类是对自己有比较明确的目标，知道自己为了什么读研，是为了深造或者是对科研有非常大的兴趣。对于第一二类人来说，我觉得可能需要自己再好好思考一下，很多时候迷茫是因为不知道自己想要做什么，这个时候唯有多尝试才能找到自己喜欢的东西；而对于第二类人来说，需要明确的是自己研究生的规划是什么，如果考取了研究生之后和本科一样荒废，那感觉意义不大。研究生生涯有非常多的事情需要做，也有比较大的科研或者项目压力，读研缓解就业压力有时只是曲线救国，更重要的是有自己的一个良好的规划并为之付出努力！</p>
+<h2 id="类型转换"><a class="markdownIt-Anchor" href="#类型转换"></a> 类型转换</h2>
+<h3 id="隐式转换"><a class="markdownIt-Anchor" href="#隐式转换"></a> 隐式转换</h3>
+<ul>
+<li>在大多数表达式中，比 int 类型小的整数值首先提升为较大的整数类型。</li>
+<li>在条件中，非布尔值转为布尔值。</li>
+<li>初始化过程中，初始值转换成变量的类型；在赋值语句中，右侧运算对象转换成左侧运算对象的类型。</li>
+<li>如果算术运算或关系运算的运算对象有多种类型，需要转换成同一种类型。</li>
+<li>函数调用时也会发生类型转换。</li>
+<li><strong>尽量避免隐式转换</strong></li>
+</ul>
+<h2 id="显式转换"><a class="markdownIt-Anchor" href="#显式转换"></a> 显式转换</h2>
+<p><strong>尽量避免类型转换！不管是隐式或者是显式！除非万不得已，否则尽可能使用显示转换！</strong></p>
+<h3 id="static_cast"><a class="markdownIt-Anchor" href="#static_cast"></a> static_cast</h3>
+<pre class="highlight"><code class="c++">double num = 10.0;
+int temp = static_cast&lt;int&gt; (num);
+
+void* p = &amp;num;
+double* ptr = static_cast&lt;double*&gt; (p);
+</code></pre>
+<p>任何编写程序时能够明确的类型转换都可以使用static_cast（static_cast不能转换掉底层const，volatile和__unaligned属性）。由于<strong>不提供运行时的检查，所以叫static_cast</strong>，因此，需要在编写程序时确认转换的安全性。</p>
+<p>主要在以下几种场合中使用：</p>
+<ol>
+<li>用于类层次结构中，父类和子类之间指针和引用的转换；进行上行转换，把子类对象的指针/引用转换为父类指针/引用，这种转换是安全的；进行下行转换，把父类对象的指针/引用转换成子类指针/引用，这种转换是不安全的，需要编写程序时来确认；</li>
+<li>用于基本数据类型之间的转换，例如把int转char，int转enum等，需要编写程序时来确认安全性；</li>
+<li>把void指针转换成目标类型的指针（这是极其不安全的），把任何类型的表达式转换成 void 类型。</li>
+</ol>
+<h3 id="const_cast"><a class="markdownIt-Anchor" href="#const_cast"></a> const_cast</h3>
+<p>const_cast用于移除类型的const、volatile和__unaligned属性。而且 const_cast 只能改变底层的const，对象必须是指针、引用或者指向对象的指针。</p>
+<ul>
+<li>常量指针被转换成非常量指针，并且仍然指向原来的对象；常量引用被转换成非常量引用，并且仍然引用原来的对象。-</li>
+</ul>
+<pre class="highlight"><code class="c++">const char *c = nullptr;
+char *c_new = const_cast&lt;char*&gt; (c);
+
+const int &amp;num = 0;
+int &amp;num_new = const_cast&lt;int&amp;&gt; (num);
+</code></pre>
+<ul>
+<li><strong>在函数重载时使用，第六章补充。</strong></li>
+</ul>
+<h3 id="dynamic_cast"><a class="markdownIt-Anchor" href="#dynamic_cast"></a> dynamic_cast</h3>
+<p>dynamic_cast 转换仅适用于指针或引用，并且运行时会进行检查，在转换可能发生的前提下，dynamic_cast会尝试转换，若指针转换失败，则返回空指针，若引用转换失败，则抛出异常。</p>
+<ol>
+<li>
+<p>继承中的转换</p>
+<p>（1）上行转换</p>
+<p>在继承关系中 ，dynamic_cast由子类向父类的转换与static_cast和隐式转换一样，都是非常安全的。</p>
+<p>（2）下行转换</p>
+<pre class="highlight"><code class="c++">class A { virtual void f(){}; };
+class B : public A{ 
+public:    
+    int num;
+};
+int main()
+{
+    A* pA = new A;
+    B* pB = dynamic_cast&lt;B*&gt;(pA); 
+    if(pB == nullptr){
+        cout &lt;&lt; &quot;s&quot; &lt;&lt; endl;
+    }else{
+        cout &lt;&lt; pB-&gt;num &lt;&lt; endl;
+    }
+}
+</code></pre>
+<p>**注意类A和类B中定义了一个虚函数，这是不可缺少的。**在基类以及派生类之间进行使用 dynamic_cast，基类一定需要虚函数。</p>
+<p>因为类中存在虚函数，说明它可能有子类，这样才有类型转换的情况发生，由于运行时类型检查需要运行时类型信息，而这个信息存储在类的虚函数表中，只有定义了虚函数的类才有虚函数表。</p>
+</li>
+<li>
+<p>void*的转换</p>
+<p>一些情况下，我们需要将指针转换为void*，然后再合适的时候重新将void*转换为目标类型指针。</p>
+<pre class="highlight"><code class="c++">class A{
+	virtual void fun(){};// 注意，这里一定需要虚函数
+};
+
+int main(){
+    A* a = new A;
+    void* b = dynamic_cast&lt;void*&gt;(a);
+    delete a;
+}
+</code></pre>
+</li>
+<li>
+<p>菱形继承中的上行转换</p>
+<p>首先，定义一组菱形继承的类：</p>
+<pre class="highlight"><code class="c++">class A { virtual void f() {}; };
+class B :public A { void f() {}; };
+class C :public A { void f() {}; };
+class D :public B, public C { void f() {}; };
+</code></pre>
+<p>B继承A，C继承A。</p>
+<p>D继承B和C。</p>
+<p>这样的情况：D对象指针不能安全的转换为A类型指针，因为B和C都继承了A，并且都实现了虚函数f()，导致在进行转换时，无法选择一条转换路径。一种可行的方法是，自行指定一条转换路径。</p>
+<pre class="highlight"><code class="cpp">void main()
+{
+    D *pD = new D;
+    A *pA = dynamic_cast&lt;A *&gt;(pD); // pA = NULL
+    
+    // 可行的方法
+    B* pB = dynamic_cast&lt;B*&gt;(pD);
+    A* pA = dynamic_cast&lt;A*&gt;(pB);
+}
+</code></pre>
+</li>
+</ol>
+<h3 id="reinterpret_cast"><a class="markdownIt-Anchor" href="#reinterpret_cast"></a> reinterpret_cast</h3>
+<p>非常激进的指针类型转换，在编译期完成，可以转换任何类型的指针，所以极不安全。非极端情况不要使用。</p>
 
                 
 
@@ -315,12 +399,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2020/10/31/git-ssl证书错误/" data-toggle="tooltip" data-placement="top" title="git push 错误">&larr; Previous Post</a>
+                            <a href="/2020/11/01/vector 和 string/" data-toggle="tooltip" data-placement="top" title="vector 和 string">&larr; Previous Post</a>
                         </li>
                      
                     
                         <li class="next">
-                            <a href="/2020/10/21/git-warning/" data-toggle="tooltip" data-placement="top" title="git warning LF will be replaced by CRLF">Next Post &rarr;</a>
+                            <a href="/2020/10/31/机器学习-01模型评估与选择/" data-toggle="tooltip" data-placement="top" title="机器学习-01模型评估与选择">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -353,7 +437,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#个人情况"><span class="toc-nav-text"> 个人情况</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#写在前面的话"><span class="toc-nav-text"> 写在前面的话</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#前期准备"><span class="toc-nav-text"> 前期准备</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-确定自己保研的机会"><span class="toc-nav-text"> 1、确定自己保研的机会</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-材料准备"><span class="toc-nav-text"> 2、材料准备</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-影响因素"><span class="toc-nav-text"> 3、影响因素</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-参营准备"><span class="toc-nav-text"> 4、参营准备</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-信息收集"><span class="toc-nav-text"> 5、信息收集</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#夏令营经历"><span class="toc-nav-text"> 夏令营经历</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#云南大学软件学院"><span class="toc-nav-text"> 云南大学软件学院</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#中南大学-计算机学院"><span class="toc-nav-text"> 中南大学 计算机学院</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#预推免经历"><span class="toc-nav-text"> 预推免经历</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#中科院信工所国重专硕"><span class="toc-nav-text"> 中科院信工所国重专硕</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#中科院深圳先进技术研究所-数字所"><span class="toc-nav-text"> 中科院深圳先进技术研究所 数字所</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#电子科技大学计算机学院专硕"><span class="toc-nav-text"> 电子科技大学计算机学院专硕</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#写给学弟学妹的话"><span class="toc-nav-text"> 写给学弟学妹的话</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#求值顺序"><span class="toc-nav-text"> 求值顺序</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#赋值运算符"><span class="toc-nav-text"> 赋值运算符</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#递增和递减运算符"><span class="toc-nav-text"> 递增和递减运算符</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#位运算符"><span class="toc-nav-text"> 位运算符</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#sizeof运算符"><span class="toc-nav-text"> sizeof运算符</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#类型转换"><span class="toc-nav-text"> 类型转换</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#隐式转换"><span class="toc-nav-text"> 隐式转换</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#显式转换"><span class="toc-nav-text"> 显式转换</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#static_cast"><span class="toc-nav-text"> static_cast</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#const_cast"><span class="toc-nav-text"> const_cast</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#dynamic_cast"><span class="toc-nav-text"> dynamic_cast</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#reinterpret_cast"><span class="toc-nav-text"> reinterpret_cast</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -373,7 +457,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#杂谈" title="杂谈">杂谈</a>
+                          <a class="tag" href="/tags/#C++" title="C++">C++</a>
                         
                     </div>
                 </section>

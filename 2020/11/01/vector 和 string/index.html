@@ -15,11 +15,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          2020 保研经历 - JosonChan | JosonTech
+          vector 和 string - JosonChan | JosonTech
         
     </title>
 
-    <link rel="canonical" href="https://JosonChan1998.github.io/2020/10/21/保研经历/">
+    <link rel="canonical" href="https://JosonChan1998.github.io/2020/11/01/vector 和 string/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -39,6 +39,15 @@
     <link rel="stylesheet" href="/css/toc.css">
 
     
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+      <!-- The loading of KaTeX is deferred to speed up page rendering -->
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+      <!-- To automatically render math in text elements, include the auto-render extension: -->
+      <!-- <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" -->
+        <!-- onload="renderMathInElement(document.body);"></script> -->
     
 
     <!-- Custom Fonts -->
@@ -73,7 +82,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('post-bg-2015.jpg')
+            background-image: url('/img/post-bg-2015.jpg')
             /*post*/
         
     }
@@ -90,14 +99,14 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#杂谈" title="杂谈">杂谈</a>
+                              <a class="tag" href="/tags/#C++" title="C++">C++</a>
                             
                         </div>
-                        <h1>2020 保研经历</h1>
-                        <h2 class="subheading"> &quot;但行好事，莫问前程&quot; </h2>
+                        <h1>vector 和 string</h1>
+                        <h2 class="subheading">&quot;好好学习标准库&quot;</h2>
                         <span class="meta">
                             Posted by JosonChan on
-                            2020-10-21
+                            2020-11-01
                         </span>
                     </div>
                 
@@ -214,99 +223,195 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="个人情况"><a class="markdownIt-Anchor" href="#个人情况"></a> 个人情况</h2>
-<ul>
-<li>本科院校：深圳大学</li>
-<li>专业：电子信息工程</li>
-<li>成绩：3/163，2%</li>
-<li>英语：四级503，六级437</li>
-<li>获奖经历：两届全国大学生机器人大赛一等奖，几个校级奖项</li>
-<li>参营情况：云南大学软件学院、中南大学计算机学院专硕</li>
-<li>预推免情况：西安电子科技大学通信学院（放弃）、南京理工大学计算机专硕（放弃）、中科院信工所国重专硕、中科院网络信息中心专硕（放弃）、中科院深圳先进技术研究所数字所专硕、电子科技大学计算机学院专硕、北航电子信息专硕（放弃）</li>
-<li>offer情况：除了放弃的都拿到</li>
-<li>最终去向：电子科技大学计算机学院</li>
-</ul>
-<h2 id="写在前面的话"><a class="markdownIt-Anchor" href="#写在前面的话"></a> 写在前面的话</h2>
-<p>保研终于结束了，从6月份到10月份，经历了保研名额的不确定，夏令营的低谷，再到预推免的波折，每一个阶段都在不断消耗、打击着我的耐心和信心。可以说，每天起来的第一件事就是看邮箱，有没有老师回我，有没有学校回我。但无论如何，每当沮丧，想要放弃的时候，总有朋友的鼓励和陪伴，总算是坚持下来了，最后也去了一个还不错的学校。在这里也非常感谢一路上帮助过我的同学、师兄师姐、老师，也非常感谢家人支持，Anyway，感谢生命中遇到的每一个人。Never say never，希望接下来的三年努力干，不要让自己后悔，成功一个合格的研究生。</p>
-<h2 id="前期准备"><a class="markdownIt-Anchor" href="#前期准备"></a> 前期准备</h2>
-<h3 id="1-确定自己保研的机会"><a class="markdownIt-Anchor" href="#1-确定自己保研的机会"></a> 1、确定自己保研的机会</h3>
-<p>对于不同的院校来说有不同的保研比例，当我们确定想要走保研这条路的时候，就要去确认自己保研的概率有多少。根据不同的概率取采取不同的策略。比如你是确定了保研或者有70%以上的概率可以保研，那么你就可以放心去冲刺更好的学校；如果你觉得自己保研的概率很低，那么我觉得夏令营可以去准备实习或者准备其他，然后等到九推的时候确定了话再冲，一旦没有保研，你还可以准备去工作或者出国等。</p>
-<h3 id="2-材料准备"><a class="markdownIt-Anchor" href="#2-材料准备"></a> 2、材料准备</h3>
-<p>每一个院校需要准备的电子材料或者纸质材料都不一样，但是大同小异，有一些我们可以确定：</p>
-<ul>
-<li>个人信息：身份证正反页、学生证正反页、教育部学籍在线验证报告</li>
-<li>成绩信息：专业排名证明、总成绩单、英语四六级成绩单</li>
-<li>文书信息：中英个人简历（A4纸）、中英个人陈述（1500字）、推荐信模型</li>
-<li>获奖证书：大学期间所获得的荣誉证书</li>
-<li>照片：个人一寸的证件照</li>
-<li>邮件模板：联系心仪导师的模板</li>
-</ul>
-<p>以上内容最好是在4-5月份就完成，后面不断地进行完善。</p>
-<h3 id="3-影响因素"><a class="markdownIt-Anchor" href="#3-影响因素"></a> 3、影响因素</h3>
-<p>对于学生来说，影响参营的通过率的因素排行往往是：院校 &gt; 专业排名 &gt; 英语成绩 &gt; 科研经历 &gt; 各类竞赛、实习、项目。所以说对于保研的同学的话，绩点是非常重要的，有些院校甚至规定要专业的第一名。同时很多院校都会卡你的四六级。因此还有机会的话，尽可能提高自己的绩点以及英语成绩，其他的内容有的话肯定是更好的。</p>
-<h3 id="4-参营准备"><a class="markdownIt-Anchor" href="#4-参营准备"></a> 4、参营准备</h3>
-<p>对于计算机来说，需要准备的有以下几个项目：中英自我介绍、英语对答、专业课程、编程能力、简历项目。</p>
-<p>对于中英自我介绍来说，我们需要自己准备一份1分钟版本以及2分钟版本的自我介绍；对于英语对答方面，我是搜索了一些经常会问到的题目并作准备，同时对自己简历上的项目点也用英语做了转变，以下是一些常见的问题：</p>
-<ul>
-<li>What’s your plan for the after 3 years?</li>
-<li>Which subject is the most useful?</li>
-<li>What’s your favorite computer language，and why?</li>
-<li>What’s your major,why do you choose computer science?</li>
-<li>Talk about your 4 years college life.</li>
-<li>Talk about your hometown?</li>
-<li>What’s your main course ?</li>
-<li>Why do you choose our school?</li>
-<li>Talk about your competition</li>
-<li>What do you do in the competition?</li>
-</ul>
-<p>对于专业课程的话，由于我是电信跨计算机且跨的方向为图像处理方向，因此我会去复习:</p>
+                <h2 id="string"><a class="markdownIt-Anchor" href="#string"></a> string</h2>
 <ul>
 <li>
-<p>数学基础：概率论与数理统计、高等数学、线性代数。</p>
+<p><code>string.size()</code>函数返回的是一个无符号的数，因此在表达式中混用带符号数以及无符号数都可能产生意向不到的结果。假设 <code>n</code> 是一个具有负值的 int，则表达式 <code>s.size() &lt; n</code> 则会把 n 转换成一个很大的无符号数，带来异常，最好使用  <code>std::size_t</code></p>
 </li>
 <li>
-<p>信号处理的基础：信号与系统、数字信号处理、数字图像处理。</p>
+<p>如果一次想读入一个词，使用 <code>cin</code>，如果想要一次读入一行，使用 <code>getline</code></p>
+<pre class="highlight"><code class="c++">    string a;
+    while (getline(cin,a)){
+        cout &lt;&lt; a &lt;&lt; endl;
+    }
+    while(cin &gt;&gt; a){
+        cout &lt;&lt; a &lt;&lt; endl;
+    }
+</code></pre>
 </li>
 <li>
-<p>计算机的基础：操作系统、计算机网络、数据结构与算法。</p>
+<p>C++ 标准库中除了定义C<ins>语言特有的功能外，也兼容了C语言的标准库。C语言的头文件命名为 <code>name.h</code>，C</ins>则命名为<code>cname</code>，这里的 <code>c</code>表示这是一个属于C语言标准库的头文件。在C++ 中尽量使用C++版本的C语言标准库。</p>
 </li>
 <li>
-<p>计算机视觉的基础：机器学习、深度学习。</p>
+<p>C++11 定义了一种新的遍历语句：range for：</p>
+<pre class="highlight"><code class="c++">string str(&quot;something&quot;);
+for (size_t c : str){
+    cout &lt;&lt; c &lt;&lt; endl;// 注意这里改变 c 不会改变 str，因为只是一个临时变量
+}
+
+
+for (auto &amp;c : str){// 如果想要改变则需要用引用
+    c = toupper(c);
+}
+</code></pre>
 </li>
 </ul>
-<p>对于一些高校来说是会看重编程能力的，因此我们也需要取刷一些OJ的题目，如 leetcode 等。</p>
-<p>最后就是我们的简历上提到的一些项目或者知识点，最好是重新整理一下项目的实现流程以及一些技术的细节，做到有条不紊的叙述你的项目以及你在项目中所做的贡献。</p>
-<h3 id="5-信息收集"><a class="markdownIt-Anchor" href="#5-信息收集"></a> 5、信息收集</h3>
-<p>对于各种学校的夏令营或者预推免的信息，最好能够每天进行一次获取，防止错过了重要的院校投递时间。同时我们也应该获取一些心仪院校的面试经验，做到有的放矢。这里推荐保研人公众号，每天都会更新院校的信息以及一些经验贴。我们可以把我们心仪的院校使用一个表格来整理，然后按时投递信息。</p>
-<p>在收集的同时，我们也可以关注一些往年院校招收生源的信息，这样的话我们能够对自己有一个比较明确的定位，做到有的放矢。</p>
-<h2 id="夏令营经历"><a class="markdownIt-Anchor" href="#夏令营经历"></a> 夏令营经历</h2>
-<h3 id="云南大学软件学院"><a class="markdownIt-Anchor" href="#云南大学软件学院"></a> 云南大学软件学院</h3>
-<p>由于今年疫情的影响，很多学校都变成了线上面试。考核的方式是编程题+英语能力测试+面试回答，大概20分钟左右。</p>
-<p>首先是英语的测试，先让我做英文的自我介绍，然后让我用英语谈谈自己的专业以及专业的主要课程是什么。</p>
-<p>编程题目是采用随机抽签的方式，然后给你大概10分钟的时间进行编写，之后问你思路还有怎么优化。</p>
-<p>面试部分就是简单的询问是否能够保研。</p>
-<h3 id="中南大学-计算机学院"><a class="markdownIt-Anchor" href="#中南大学-计算机学院"></a> 中南大学 计算机学院</h3>
-<p>中南大学计算机学院今年也是采取线上的形式，在夏令营的时候给了很多offer，所以到最后是有可能出现没书读的情况，因此师弟师妹要看清楚邮件给你的发的offer，小心超发。</p>
-<p>采用线上面试，考核方式是英语能力测试+PPT自己介绍和提问，大概15分钟左右。</p>
-<p>首先是PPT的展示,大概8分钟左右。</p>
-<p>然后是英语自我介绍,然后根据我的自我介绍,用英语提问了我学习了什么机器学习算法，需要什么基础。</p>
-<p>然后老师针对PPT问了几个关于卷积神经网络的知识点。</p>
-<h2 id="预推免经历"><a class="markdownIt-Anchor" href="#预推免经历"></a> 预推免经历</h2>
-<h3 id="中科院信工所国重专硕"><a class="markdownIt-Anchor" href="#中科院信工所国重专硕"></a> 中科院信工所国重专硕</h3>
-<p>同样是线上的形式，考核形式是英语能力+专业知识，大概是15分钟。</p>
-<p>首先让我作英语自我介绍，然后英语提问了为什么选择我们学院以及谈谈我对自己专业的理解。</p>
-<p>然后针对简历进行提问，想问了访学的内容还有比赛的内容以及我在比赛中做了什么贡献。</p>
-<p>最后是问了导师选择好了没有，以及是否同意调剂。</p>
-<h3 id="中科院深圳先进技术研究所-数字所"><a class="markdownIt-Anchor" href="#中科院深圳先进技术研究所-数字所"></a> <strong>中科院深圳先进技术研究所 数字所</strong></h3>
-<p>同样是线上的形式，考核形式是英语能力+专业知识，大概是15分钟。</p>
-<p>首先是英文自我介绍，然后让我讲一下我的比赛以及我负责的东西。然后详细问了我关于比赛中使用的网络模型，以及优化的点还有准确率的提升。还问了冒泡排序和时间复杂度是多少，最后问了我是否还有其他的offer。</p>
-<h3 id="电子科技大学计算机学院专硕"><a class="markdownIt-Anchor" href="#电子科技大学计算机学院专硕"></a> 电子科技大学计算机学院专硕</h3>
-<p>计算机学院需要先提前联系好老师，后面其实是走流程了。然后考核的形式是英语能力+编程能力+专业知识，大概是15分钟。</p>
-<p>首先是英文的自我简述，大概是3分钟，把背景以及比赛等做了一些介绍。然后老师追问了两个非常规的英文题目，一个是这两届比赛中你都作了什么有什么区别？还有一个是让我作访学经历的总结。</p>
-<p>之后是随机挑选一道遍历矩阵的题目，大概10分钟，让我说出思路。</p>
-<p>最后就是根据项目和比赛等进行提问，主要是问比赛的形式以及取得的成绩等。</p>
-<h2 id="写给学弟学妹的话"><a class="markdownIt-Anchor" href="#写给学弟学妹的话"></a> 写给学弟学妹的话</h2>
-<p>我觉得对于想要保研的学弟学妹来说，最需要明确的一点是自己为了什么而读研。对于读研来说，可以大致分为三类人，第一类是别人读研我也要去读研，这一类型的人往往对于自己没有清晰的定位，或者说是迷茫。第二类是为了补救大学的虚度，缓解就业的压力，有的同学可能觉得自己在大学期间什么也没有学到，觉得自己并没有这个能力来应聘自己心仪的岗位，于是就想在研究生进行逆袭。第三类是对自己有比较明确的目标，知道自己为了什么读研，是为了深造或者是对科研有非常大的兴趣。对于第一二类人来说，我觉得可能需要自己再好好思考一下，很多时候迷茫是因为不知道自己想要做什么，这个时候唯有多尝试才能找到自己喜欢的东西；而对于第二类人来说，需要明确的是自己研究生的规划是什么，如果考取了研究生之后和本科一样荒废，那感觉意义不大。研究生生涯有非常多的事情需要做，也有比较大的科研或者项目压力，读研缓解就业压力有时只是曲线救国，更重要的是有自己的一个良好的规划并为之付出努力！</p>
+<h2 id="vector"><a class="markdownIt-Anchor" href="#vector"></a> Vector</h2>
+<ul>
+<li>
+<p>C++ 11取消了<code>vector</code>对象是<code>vector</code> 时的定义标准，过去在外层对象的右尖括号和其元素之间需要有一个空格，C++11不需要。</p>
+<pre class="highlight"><code class="c++">#include &lt;vector&gt;
+using namespace std;
+vector&lt;vector&lt;int&gt;&gt; matrix;// C++11
+vector&lt;vector&lt;int&gt; &gt; matrix;// 早期标准
+</code></pre>
+</li>
+<li>
+<p>如果循环体内部包含有向 <code>vector</code> 对象添加元素的语句，则不能使range for 语句，<strong>因为range for 语句要求遍历对象拥有能返回迭代器的 begin 和 end 成员。如果我们在 range for 语句中添加或者删除了元素，则 end() 函数的值就可能变得无效了。</strong></p>
+</li>
+</ul>
+<h2 id="迭代器"><a class="markdownIt-Anchor" href="#迭代器"></a> 迭代器</h2>
+<ul>
+<li>
+<p>迭代器的标准类型使用 <code>iterator</code> 以及 <code>const_itrator</code> 来表示迭代器的类型：</p>
+<pre class="highlight"><code class="c++">vector&lt;int&gt; arr1;
+const vector&lt;int&gt; arr2;
+
+vector&lt;int&gt;::iterator it;
+vector&lt;int&gt;::const_iterator it;// 和常量指针差不多，只能读取值，不能改变值
+</code></pre>
+</li>
+<li>
+<p><code>begin()</code>以及<code>end()</code> 根据对象是否是常量来返回迭代器，如果想一直得到 <code>const_iterator</code> 类型的返回值，C++11新标准引入了两个函数，分别是<code>cbegin()</code>以及 <code>cend()</code></p>
+</li>
+<li>
+<p>某些对容器的操作会导致迭代器失效，一种是不能在 range for 语句循环中向 vector 对象添加元素，另外一个限制是任何一种可能改变 vector 对象容量的操作，比如 <code>push_back</code> ,都会使得 <code>vector</code> 对象的迭代器失效。</p>
+</li>
+</ul>
+<h2 id="复杂的数组声明"><a class="markdownIt-Anchor" href="#复杂的数组声明"></a> 复杂的数组声明</h2>
+<ul>
+<li>
+<p>对于数组来说，由内向外阅读比从右到左好。由于数组是一个对象，因此有数组的指针以及数组的引用，但是没有数组元素没有引用类型。</p>
+<pre class="highlight"><code class="c++">int *ptrs[10];// ptr 是一个存放10个指针的数组
+int (*ptr)[10]=arr;// ptr 是一个存放10个int的数组的指针
+int (&amp;ptr)[10]=&amp;arr;// ptr是一个存放10个int的数组的引用
+int *(&amp;ptr)[10]=&amp;ptrs;// ptr 是一个存放10个int*的数组的引用
+</code></pre>
+</li>
+<li>
+<p>数组的维度必须是一个常量表达式，可以使用 constexpr。</p>
+<pre class="highlight"><code class="c++">unsigned int i = 10;
+int a[i];// 错误
+</code></pre>
+<p>但是我在我的机器上使用了如下：</p>
+<pre class="highlight"><code class="c++">int fun1(int x){
+    return x;
+}
+
+int main(){
+    unsigned buf_size = 1024;
+    int x = 100;
+    int nums[fun1(x)] = {0};
+
+    cout &lt;&lt; nums[0] &lt;&lt; endl;
+}
+</code></pre>
+<p>并没有发生错误，原因是因为我使用的 <code>g++</code> 进行编译，可变长数组是<code>g++</code>编译器的扩展，C++ 是不允许使用这种用法。</p>
+<p>参考：<a href="https://blog.csdn.net/qq_43827595/article/details/104269501" target="_blank" rel="noopener">数组维度定义</a></p>
+</li>
+<li>
+<p>C++11 为了获取数组的尾后指针，引入了两个函数， <code>begin()</code>和<code>end()</code>，需要包括 <code>iterator</code>头文件。</p>
+<pre class="highlight"><code class="c++">#include &lt;iterator&gt;
+int nums[10] = {0};
+for(int* ptr = begin(nums);ptr != end(nums);++ptr){
+    (*ptr)++;
+}
+
+for(auto i : nums){
+    cout &lt;&lt; i &lt;&lt; endl;
+}
+</code></pre>
+</li>
+<li>
+<p>内置的下标运算符所用的索引值不是无符号类型，而标准库规定使用的是无符号的类型。</p>
+</li>
+</ul>
+<h3 id="多维数组"><a class="markdownIt-Anchor" href="#多维数组"></a> 多维数组</h3>
+<ul>
+<li>
+<p>要使用 range for 语句处理多维数组，除了最外层的循环之外，其他所有循环的控制变量都应该是引用类型。</p>
+<pre class="highlight"><code class="c++">int ia[10][10];
+for (auto &amp;row : ia){// 如果不是引用，则auto 会把row 当成int* 指针
+	for (auto col : row){
+		col = 1;
+	}
+}
+</code></pre>
+</li>
+<li>
+<p>因为多维数组实际上是数组的数组，所以由多维数组名转换得到的指针实际上是指向第一个内层数组的指针,需要注意的是，解引用之后是指向该行第一个元素的指针。</p>
+<pre class="highlight"><code class="c++">    constexpr size_t rowCnt = 3, colCnt = 4;
+    int ia[rowCnt][colCnt] = {0};
+
+    // 传统的for循环
+    for(size_t i=0;i!=rowCnt;++i){
+        for(size_t j=0;j!=colCnt;++j){
+            cout &amp;lt;&amp;lt; ia[i][j] &amp;lt;&amp;lt; endl;
+        }
+    }
+    cout &amp;lt;&amp;lt; &amp;quot; ----------------------&amp;quot; &amp;lt;&amp;lt; endl;
+    // 使用 for range
+    for (int (&amp;amp;row)[colCnt] : ia){
+        for (int col : row){
+            cout &amp;lt;&amp;lt; col &amp;lt;&amp;lt; endl;
+        }
+    }
+    cout &amp;lt;&amp;lt; &amp;quot; ----------------------&amp;quot; &amp;lt;&amp;lt; endl;
+    // 使用指针
+    for(int (*rowptr)[colCnt] = ia;rowptr != ia+3;rowptr++){
+        for(int* colptr = *rowptr;colptr != *rowptr+4;colptr++){
+            cout  &amp;lt;&amp;lt; *colptr &amp;lt;&amp;lt; endl;
+        }
+    }
+	// 使用begin 和 end
+	for(auto row = begin(ia);row != end(ia); ++row){
+        for(auto col=begin(*row);col != end(*row);++col){
+            cout &amp;lt;&amp;lt; *col &amp;lt;&amp;lt; endl;
+        }
+    }
+--
+</code></pre>
+</li>
+<li>
+<p>同时我们可以用别名来代替：</p>
+<pre class="highlight"><code class="c++">    constexpr size_t rowCnt = 3, colCnt = 4;
+    int ia[rowCnt][colCnt] = {0};
+
+    using int_array_4 = int[4];
+
+    // 传统的for循环
+    for(auto i=0;i!=rowCnt;++i){
+        for(auto j=0;j!=colCnt;++j){
+            cout &lt;&lt; ia[i][j] &lt;&lt; endl;
+        }
+    }
+    cout &lt;&lt; &quot; ----------------------&quot; &lt;&lt; endl;
+    // 使用 for range
+    for (int_array_4 &amp;row : ia){
+        for (int col : row){
+            cout &lt;&lt; col &lt;&lt; endl;
+        }
+    }
+    cout &lt;&lt; &quot; ----------------------&quot; &lt;&lt; endl;
+    // 使用指针
+    for(int_array_4 *rowptr = begin(ia);rowptr != end(ia);rowptr++){
+        for(int *colptr = *rowptr;colptr != *rowptr+4;colptr++){
+            cout  &lt;&lt; *colptr &lt;&lt; endl;
+        }
+    }
+</code></pre>
+</li>
+</ul>
 
                 
 
@@ -315,12 +420,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2020/10/31/git-ssl证书错误/" data-toggle="tooltip" data-placement="top" title="git push 错误">&larr; Previous Post</a>
+                            <a href="/2020/11/01/变量与基本类型/" data-toggle="tooltip" data-placement="top" title="变量与基本类型">&larr; Previous Post</a>
                         </li>
                      
                     
                         <li class="next">
-                            <a href="/2020/10/21/git-warning/" data-toggle="tooltip" data-placement="top" title="git warning LF will be replaced by CRLF">Next Post &rarr;</a>
+                            <a href="/2020/10/31/表达式/" data-toggle="tooltip" data-placement="top" title="表达式">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -353,7 +458,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#个人情况"><span class="toc-nav-text"> 个人情况</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#写在前面的话"><span class="toc-nav-text"> 写在前面的话</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#前期准备"><span class="toc-nav-text"> 前期准备</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-确定自己保研的机会"><span class="toc-nav-text"> 1、确定自己保研的机会</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-材料准备"><span class="toc-nav-text"> 2、材料准备</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-影响因素"><span class="toc-nav-text"> 3、影响因素</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-参营准备"><span class="toc-nav-text"> 4、参营准备</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-信息收集"><span class="toc-nav-text"> 5、信息收集</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#夏令营经历"><span class="toc-nav-text"> 夏令营经历</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#云南大学软件学院"><span class="toc-nav-text"> 云南大学软件学院</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#中南大学-计算机学院"><span class="toc-nav-text"> 中南大学 计算机学院</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#预推免经历"><span class="toc-nav-text"> 预推免经历</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#中科院信工所国重专硕"><span class="toc-nav-text"> 中科院信工所国重专硕</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#中科院深圳先进技术研究所-数字所"><span class="toc-nav-text"> 中科院深圳先进技术研究所 数字所</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#电子科技大学计算机学院专硕"><span class="toc-nav-text"> 电子科技大学计算机学院专硕</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#写给学弟学妹的话"><span class="toc-nav-text"> 写给学弟学妹的话</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#string"><span class="toc-nav-text"> string</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#vector"><span class="toc-nav-text"> Vector</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#迭代器"><span class="toc-nav-text"> 迭代器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#复杂的数组声明"><span class="toc-nav-text"> 复杂的数组声明</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#多维数组"><span class="toc-nav-text"> 多维数组</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -373,7 +478,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#杂谈" title="杂谈">杂谈</a>
+                          <a class="tag" href="/tags/#C++" title="C++">C++</a>
                         
                     </div>
                 </section>
