@@ -225,14 +225,14 @@
 
                 <h1 id="towards-open-world-object-detection"><a class="markdownIt-Anchor" href="#towards-open-world-object-detection"></a> Towards Open World Object Detection</h1>
 <h3 id="task-definition"><a class="markdownIt-Anchor" href="#task-definition"></a> Task definition</h3>
-<p>目前的大型数据集VOC或者是COCO，都只有几十类，因此训练得到的检测器也只能检测几十个类别的物体。而人可以检测出非常多种的物体，就算不知道这个类别，也会标记成不知道。同时人类并不会忘记以前认识的类别。如何使得检测器能够像人一样识别几十万甚至几百万的类别呢？显然不可能将数百万类别的数据一起训练，这做不到。如果使用使用标记好的数据进行fine-tune，这样的做法会导致检测器忘记以前学到的类别。针对以上的问题，能够有一种检测器能够在不忘记之前学到的类别的同时，不断学习到不同的类别呢？</p>
+<p>目前的大型数据集VOC或者是COCO，都只有几十类，因此训练得到的检测器也只能检测几十个类别的物体。而人可以检测出非常多种的物体，就算不知道这个类别，也会标记成不知道。同时人类并不会忘记以前认识的类别。如何使得检测器能够像人一样识别几十万甚至几百万的类别呢？显然不可能将数百万类别的数据一起训练，这做不到。如果使用使用标记好的数据进行fine-tune，这样的做法会导致检测器忘记以前学到的类别。针对以上的问题，需要有一种检测器能够对没有标注的物体进行检测，在不忘记之前学到的类别的同时，不断学习到不同的类别。</p>
 <h3 id="challenge"><a class="markdownIt-Anchor" href="#challenge"></a> Challenge</h3>
 <ul>
 <li>A test image might contain objects from unknown classes, which should be classified as unknown.</li>
 <li>As and when information (labels) about such identified unknowns become available, the model should be able to incrementally learn the new class.</li>
 </ul>
 <p><img src="/2021/03/21/Towards Open World Object Detection/C:%5CUsers%5Cchen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210321003728076.png" alt="image-20210321003728076"></p>
-<p>针对这个问题，面临的挑战是：</p>
+<p>针对以上问题，任务定义：</p>
 <ul>
 <li>如何将图像的没有标签的物体标记为unknown呢？</li>
 <li>如何在不忘记之前学到的类别的情况下，加入新的类别信息让检测器不断学习新的类别呢？</li>
