@@ -136,14 +136,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About Me</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About Me</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -287,6 +287,41 @@ P......
 
 <div class="post-preview">
 
+    <a href="/2020/11/01/vector 和 string/">
+        <h2 class="post-title">
+            vector 和 string
+        </h2>
+        <h3 class="post-subtitle">
+            "好好学习标准库"
+        </h3>
+        <div class="post-content-preview">
+             string
+
+
+string.size()函数返回的是一个无符号的数，因此在表达式中混用带符号数以及无符号数都可能产生意向不到的结果。假设 n 是一个具有负值的 int，则表达式 s.size() &lt; n 则会把 n 转换成一个很大的无符号数，带来异常，最好使用  std::size_t
+
+
+如果一次想读入一个词，使用 cin，如果想要一次读入一行，使用 getline
+    s......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by JosonChan on
+            2020-11-01
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#C++" title="C++">C++</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2020/11/01/变量与基本类型/">
         <h2 class="post-title">
             变量与基本类型
@@ -307,41 +342,6 @@ P......
 浮点数尽可能使用 double 而非 float
 
  声......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by JosonChan on
-            2020-11-01
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#C++" title="C++">C++</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2020/11/01/vector 和 string/">
-        <h2 class="post-title">
-            vector 和 string
-        </h2>
-        <h3 class="post-subtitle">
-            "好好学习标准库"
-        </h3>
-        <div class="post-content-preview">
-             string
-
-
-string.size()函数返回的是一个无符号的数，因此在表达式中混用带符号数以及无符号数都可能产生意向不到的结果。假设 n 是一个具有负值的 int，则表达式 s.size() &lt; n 则会把 n 转换成一个很大的无符号数，带来异常，最好使用  std::size_t
-
-
-如果一次想读入一个词，使用 cin，如果想要一次读入一行，使用 getline
-    s......
         </div>
     </a>
     
@@ -684,11 +684,11 @@ $ git config --global core.auto......
         </li>
       
         <li>
-          <a href="/2020/11/01/变量与基本类型/">变量与基本类型</a>
+          <a href="/2020/11/01/vector 和 string/">vector 和 string</a>
         </li>
       
         <li>
-          <a href="/2020/11/01/vector 和 string/">vector 和 string</a>
+          <a href="/2020/11/01/变量与基本类型/">变量与基本类型</a>
         </li>
       
         <li>
